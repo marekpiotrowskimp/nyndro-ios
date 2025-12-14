@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="beadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="50%" style="stop-color:#C9A227"/>
+      <stop offset="100%" style="stop-color:#B8960F"/>
+    </linearGradient>
+    <linearGradient id="guruBeadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B0000"/>
+      <stop offset="50%" style="stop-color:#6B0000"/>
+      <stop offset="100%" style="stop-color:#4B0000"/>
+    </linearGradient>
+    <linearGradient id="stringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513"/>
+      <stop offset="100%" style="stop-color:#654321"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- String/cord circle -->
+  <circle cx="50" cy="50" r="32" fill="none" stroke="url(#stringGradient)" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Beads arranged in a circle (simplified - showing key beads) -->
+  <!-- Top beads -->
+  <circle cx="50" cy="18" r="4" fill="url(#beadGradient)"/>
+  <circle cx="58" cy="19" r="4" fill="url(#beadGradient)"/>
+  <circle cx="66" cy="22" r="4" fill="url(#beadGradient)"/>
+  <circle cx="73" cy="27" r="4" fill="url(#beadGradient)"/>
+  <circle cx="78" cy="34" r="4" fill="url(#beadGradient)"/>
+  <circle cx="81" cy="42" r="4" fill="url(#beadGradient)"/>
+  <circle cx="82" cy="50" r="4" fill="url(#beadGradient)"/>
+  <circle cx="81" cy="58" r="4" fill="url(#beadGradient)"/>
+  <circle cx="78" cy="66" r="4" fill="url(#beadGradient)"/>
+  <circle cx="73" cy="73" r="4" fill="url(#beadGradient)"/>
+  <circle cx="66" cy="78" r="4" fill="url(#beadGradient)"/>
+  <circle cx="58" cy="81" r="4" fill="url(#beadGradient)"/>
+  <circle cx="50" cy="82" r="4" fill="url(#beadGradient)"/>
+  <circle cx="42" cy="81" r="4" fill="url(#beadGradient)"/>
+  <circle cx="34" cy="78" r="4" fill="url(#beadGradient)"/>
+  <circle cx="27" cy="73" r="4" fill="url(#beadGradient)"/>
+  <circle cx="22" cy="66" r="4" fill="url(#beadGradient)"/>
+  <circle cx="19" cy="58" r="4" fill="url(#beadGradient)"/>
+  <circle cx="18" cy="50" r="4" fill="url(#beadGradient)"/>
+  <circle cx="19" cy="42" r="4" fill="url(#beadGradient)"/>
+  <circle cx="22" cy="34" r="4" fill="url(#beadGradient)"/>
+  <circle cx="27" cy="27" r="4" fill="url(#beadGradient)"/>
+  <circle cx="34" cy="22" r="4" fill="url(#beadGradient)"/>
+  <circle cx="42" cy="19" r="4" fill="url(#beadGradient)"/>
+  
+  <!-- Guru bead (larger, at bottom) -->
+  <ellipse cx="50" cy="88" rx="5" ry="6" fill="url(#guruBeadGradient)"/>
+  
+  <!-- Tassel strings -->
+  <line x1="50" y1="94" x2="46" y2="99" stroke="#8B4513" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="50" y1="94" x2="50" y2="100" stroke="#8B4513" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="50" y1="94" x2="54" y2="99" stroke="#8B4513" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

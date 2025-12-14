@@ -1,0 +1,138 @@
+[
+  {
+    "id": "refuge",
+    "colorId": "refuge",
+    "imageName": "shield.fill",
+    "maxRepetition": 111111,
+    "defaultRepetition": 108,
+    "name": {
+      "en": "Refuge",
+      "pl": "Schronienie",
+      "de": "Zuflucht"
+    },
+    "description": {
+      "en": "Taking refuge in Buddha, Dharma, Sangha with prostrations",
+      "pl": "Przyjmowanie schronienia w Buddzie, Dharmie, Sandze z pokłonami",
+      "de": "Zuflucht zu Buddha, Dharma, Sangha nehmen mit Niederwerfungen"
+    }
+  },
+  {
+    "id": "bodhicitta",
+    "colorId": "bodhicitta",
+    "imageName": "heart.circle.fill",
+    "maxRepetition": 111111,
+    "defaultRepetition": 108,
+    "name": {
+      "en": "Bodhicitta",
+      "pl": "Bodhicitta",
+      "de": "Bodhicitta"
+    },
+    "description": {
+      "en": "Developing the enlightened attitude for the benefit of all beings",
+      "pl": "Rozwijanie oświeconej postawy dla dobra wszystkich istot",
+      "de": "Entwicklung der erleuchteten Haltung zum Wohle aller Wesen"
+    }
+  },
+  {
+    "id": "vajrasattva",
+    "colorId": "vajrasattva",
+    "imageName": "drop.fill",
+    "maxRepetition": 111111,
+    "defaultRepetition": 108,
+    "name": {
+      "en": "Vajrasattva",
+      "pl": "Wadżrasattwa",
+      "de": "Vajrasattva"
+    },
+    "description": {
+      "en": "Purification practice with the 100-syllable mantra",
+      "pl": "Praktyka oczyszczania z mantrą 100 sylab",
+      "de": "Reinigungspraxis mit dem 100-Silben-Mantra"
+    }
+  },
+  {
+    "id": "mandala",
+    "colorId": "mandala",
+    "imageName": "circle.hexagongrid.fill",
+    "maxRepetition": 111111,
+    "defaultRepetition": 108,
+    "name": {
+      "en": "Mandala Offering",
+      "pl": "Ofiarowanie Mandali",
+      "de": "Mandala-Opferung"
+    },
+    "description": {
+      "en": "Offering the universe to accumulate merit and wisdom",
+      "pl": "Ofiarowanie wszechświata dla gromadzenia zasługi i mądrości",
+      "de": "Das Universum darbringen um Verdienst und Weisheit anzusammeln"
+    }
+  },
+  {
+    "id": "guruyoga",
+    "colorId": "guruyoga",
+    "imageName": "sun.max.fill",
+    "maxRepetition": 111111,
+    "defaultRepetition": 108,
+    "name": {
+      "en": "Guru Yoga",
+      "pl": "Guru Joga",
+      "de": "Guru Yoga"
+    },
+    "description": {
+      "en": "Receiving blessings through devotion to the teacher",
+      "pl": "Otrzymywanie błogosławieństw przez oddanie nauczycielowi",
+      "de": "Segnungen durch Hingabe an den Lehrer empfangen"
+    }
+  },
+  {
+    "id": "chenrezig",
+    "colorId": "chenrezig",
+    "imageName": "hands.clap.fill",
+    "maxRepetition": 1000000,
+    "defaultRepetition": 108,
+    "name": {
+      "en": "Chenrezig (OM MANI)",
+      "pl": "Czenrezig (OM MANI)",
+      "de": "Chenrezig (OM MANI)"
+    },
+    "description": {
+      "en": "Recitation of the six-syllable mantra of compassion",
+      "pl": "Recytacja sześciosylabowej mantry współczucia",
+      "de": "Rezitation des sechssilbigen Mantras des Mitgefühls"
+    }
+  },
+  {
+    "id": "amitabha",
+    "colorId": "amitabha",
+    "imageName": "sparkles",
+    "maxRepetition": 1000000,
+    "defaultRepetition": 108,
+    "name": {
+      "en": "Amitabha",
+      "pl": "Amitabha",
+      "de": "Amitabha"
+    },
+    "description": {
+      "en": "Practice of the Buddha of Infinite Light",
+      "pl": "Praktyka Buddy Nieskończonego Światła",
+      "de": "Praxis des Buddha des Unendlichen Lichts"
+    }
+  },
+  {
+    "id": "custom",
+    "colorId": "custom",
+    "imageName": "plus.circle.fill",
+    "maxRepetition": 111111,
+    "defaultRepetition": 108,
+    "name": {
+      "en": "Custom Practice",
+      "pl": "Własna praktyka",
+      "de": "Eigene Praxis"
+    },
+    "description": {
+      "en": "Add your own custom practice",
+      "pl": "Dodaj własną praktykę",
+      "de": "Füge deine eigene Praxis hinzu"
+    }
+  }
+]

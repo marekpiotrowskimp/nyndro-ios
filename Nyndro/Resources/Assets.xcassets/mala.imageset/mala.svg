@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" width="25" height="25">
+  <!-- Mala arc fragment - Buddhist prayer beads -->
+  <!-- Arc of beads representing a portion of the 108-bead mala -->
+  
+  <!-- Main arc with beads - curved fragment -->
+  <g fill="currentColor">
+    <!-- Larger guru/marker bead at top -->
+    <circle cx="12.5" cy="3" r="2.5"/>
+    
+    <!-- Beads along the arc - left side going down -->
+    <circle cx="6" cy="5" r="1.8"/>
+    <circle cx="3" cy="9" r="1.8"/>
+    <circle cx="2" cy="14" r="1.8"/>
+    <circle cx="3.5" cy="19" r="1.8"/>
+    
+    <!-- Beads along the arc - right side going down -->
+    <circle cx="19" cy="5" r="1.8"/>
+    <circle cx="22" cy="9" r="1.8"/>
+    <circle cx="23" cy="14" r="1.8"/>
+    <circle cx="21.5" cy="19" r="1.8"/>
+    
+    <!-- Bottom connecting beads -->
+    <circle cx="7" cy="22.5" r="1.8"/>
+    <circle cx="12.5" cy="24" r="1.8"/>
+    <circle cx="18" cy="22.5" r="1.8"/>
+  </g>
+</svg>

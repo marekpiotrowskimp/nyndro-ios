@@ -1,0 +1,193 @@
+/* 
+  Localizable.strings (English)
+  Nyndro
+*/
+
+// MARK: - App
+"app.name" = "Nyndro";
+
+// MARK: - Tabs
+"tab.practices" = "Practices";
+"tab.statistics" = "Statistics";
+"tab.history" = "History";
+"tab.settings" = "Settings";
+
+// MARK: - About
+"about.description" = "A mindful practice tracking app for Buddhist practitioners following the Ngöndro path.";
+"about.made_with_love" = "Made with mindfulness";
+"about.dedication" = "May this app benefit all sentient beings";
+
+// MARK: - Onboarding
+"onboarding.welcome.title" = "Welcome to Nyndro";
+"onboarding.welcome.subtitle" = "Your mindful companion for Ngöndro practice";
+"onboarding.progress.title" = "Track Your Progress";
+"onboarding.progress.subtitle" = "Track your progress toward your traditional practice goals";
+"onboarding.counter.title" = "Simple Counting";
+"onboarding.counter.subtitle" = "Simply tap the screen to count your repetitions";
+"onboarding.prediction.title" = "Smart Predictions";
+"onboarding.prediction.subtitle" = "Get insights on when you'll complete your goals based on your practice patterns";
+"onboarding.reminders.title" = "Mindful Reminders";
+"onboarding.reminders.subtitle" = "Set gentle reminders to maintain your daily practice";
+"onboarding.next" = "Next";
+"onboarding.get_started" = "Get Started";
+"onboarding.skip" = "Skip";
+
+// MARK: - Practice
+"practice.add" = "Add Practice";
+"practice.add.predefined" = "Predefined Practices";
+"practice.add.custom" = "Custom Practice";
+"practice.add.all_added" = "All predefined practices added";
+"practice.add.try_custom" = "Try adding a custom practice";
+"practice.name.placeholder" = "Practice name";
+"practice.description.placeholder" = "Description (optional)";
+"practice.section.details" = "Details";
+"practice.section.goal" = "Goal";
+"practice.section.color" = "Color";
+"practice.goal" = "Goal";
+"practice.goal.format" = "%@ repetitions";
+"practice.goal.common" = "Common Goals";
+"practice.goal.custom" = "Custom Goal";
+"practice.goal.custom.section" = "Custom";
+"practice.goal.select" = "Select Goal";
+"practice.default_repetitions" = "Default per session";
+"practice.default_reps.footer" = "How many repetitions to count per tap (e.g., 108 for one mala)";
+"practice.progress" = "%@ of %@";
+"practice.completed" = "Completed";
+"practice.last_session" = "Last session";
+"practice.start_session" = "Start Session";
+"practice.add_manual" = "Add Manual Entry";
+"practice.recent_history" = "Recent History";
+"practice.no_history" = "No practice history yet";
+"practice.edit" = "Edit Practice";
+
+// MARK: - Counter
+"counter.tap_to_count" = "Tap to count";
+"counter.tap_anywhere" = "Tap anywhere to count";
+"counter.end_session" = "End Session";
+"counter.this_session" = "This session";
+"counter.session_count" = "Session Count";
+"counter.per_tap" = "per tap";
+"counter.tap_value" = "Count per tap";
+"counter.common_values" = "Common Values";
+"counter.custom_value" = "Custom Value";
+"counter.custom" = "Custom";
+"counter.default" = "Default";
+"counter.exit.title" = "End Session?";
+"counter.exit.message" = "You have %@ repetitions in this session. Would you like to save them?";
+"counter.save_exit" = "Save & Exit";
+"counter.discard" = "Discard";
+"counter.milestone" = "Milestone";
+"counter.repetitions" = "repetitions";
+
+// MARK: - Statistics
+"statistics.overview" = "Overview";
+"statistics.estimated_completion" = "Estimated Completion";
+"statistics.prediction" = "Prediction";
+"statistics.most_likely" = "Most likely";
+"statistics.optimistic" = "Optimistic";
+"statistics.pessimistic" = "Pessimistic";
+"statistics.confidence" = "Confidence";
+"statistics.confidence.insufficient" = "Insufficient data";
+"statistics.confidence.low" = "Low confidence";
+"statistics.confidence.medium" = "Medium confidence";
+"statistics.confidence.high" = "High confidence";
+"statistics.insufficient_data" = "Insufficient data";
+"statistics.need_more_days" = "Practice for at least %@ days for predictions";
+"statistics.daily_average" = "Daily average";
+"statistics.weekly_average" = "Weekly average";
+"statistics.monthly_average" = "Monthly average";
+"statistics.practice_days" = "Practice days";
+"statistics.per_day" = "per day";
+"statistics.streak" = "Streak";
+"statistics.days" = "days";
+"statistics.current_streak" = "Current streak";
+"statistics.best_streak" = "Best streak";
+"statistics.completed" = "Completed";
+"statistics.remaining" = "Remaining";
+"statistics.progress" = "Progress";
+"statistics.years_remaining" = "%d+ years";
+"statistics.days_remaining" = "%d days";
+
+// MARK: - Settings
+"settings.section.appearance" = "Appearance";
+"settings.section.counter" = "Counter";
+"settings.section.data" = "Data";
+"settings.section.about" = "About";
+"settings.section.danger" = "Danger Zone";
+"settings.progress_style" = "Progress Style";
+"settings.keep_screen_awake" = "Keep Screen Awake";
+"settings.counter_sound" = "Counter Sound";
+"settings.haptic_feedback" = "Haptic Feedback";
+"settings.export_data" = "Export Data";
+"settings.import_data" = "Import Data";
+"settings.about" = "About";
+"settings.reset_all_data" = "Reset All Data";
+"settings.reset_warning" = "This will permanently delete all your practices, history, and settings.";
+"settings.reset_confirmation_title" = "Reset All Data?";
+"settings.reset_confirmation_message" = "This action cannot be undone.";
+"settings.reset_confirm" = "Reset";
+"settings.export_title" = "Export Data";
+"settings.export_json" = "Export as JSON";
+"settings.export_csv" = "Export as CSV";
+"settings.version" = "Version";
+
+// MARK: - Settings Sound & Haptic
+"settings.sound.none" = "None";
+"settings.sound.click" = "Click";
+"settings.sound.bell" = "Bell";
+"settings.sound.singing_bowl" = "Singing Bowl";
+"settings.sound.gong" = "Gong";
+"settings.haptic.none" = "None";
+"settings.haptic.light" = "Light";
+"settings.haptic.medium" = "Medium";
+"settings.haptic.heavy" = "Strong";
+"settings.progress_style.lotus" = "Lotus";
+"settings.progress_style.mala" = "Mala";
+
+// MARK: - Reminder
+"reminder.repeat.none" = "Once";
+"reminder.repeat.daily" = "Daily";
+"reminder.repeat.weekly" = "Weekly";
+"reminder.repeat.monthly" = "Monthly";
+
+// MARK: - Milestone
+"milestone.personal_best.title" = "Personal Best!";
+
+// MARK: - Date
+"date.today" = "Today";
+"date.yesterday" = "Yesterday";
+
+// MARK: - Empty States
+"empty.practices.title" = "No Practices";
+"empty.practices.message" = "Add your first practice to get started";
+"empty.history.title" = "No History";
+"empty.history.message" = "Your practice history will appear here";
+"empty.statistics.title" = "No Statistics";
+"empty.statistics.message" = "Start practicing to see your statistics";
+
+// MARK: - Common
+"common.cancel" = "Cancel";
+"common.save" = "Save";
+"common.delete" = "Delete";
+"common.edit" = "Edit";
+"common.done" = "Done";
+"common.add" = "Add";
+"common.continue" = "Continue";
+"common.see_all" = "See All";
+"common.set" = "Set";
+
+// MARK: - Filter
+"filter.all" = "All";
+
+// MARK: - History
+"history.delete.confirmation" = "Are you sure you want to delete this entry?";
+"history.total_count" = "Total: %d";
+
+// MARK: - Practice Additional
+"practice.unknown" = "Unknown Practice";
+"practice.count" = "Count";
+"practice.note" = "Note (optional)";
+"practice.custom" = "Custom";
+"practice.delete.confirmation" = "Are you sure you want to delete this practice?";
+"practice.duration" = "Duration: %@";
+"practice.add_manual.message" = "Enter the number of repetitions to add manually";

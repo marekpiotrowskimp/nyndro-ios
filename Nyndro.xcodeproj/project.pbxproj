@@ -1,0 +1,883 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03F8BA95154F0AF882873CDE /* StatisticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369E8D0B2F5AF7447CD248F6 /* StatisticsService.swift */; };
+		06929B6DE27E511040FA9259 /* PracticeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E319EA89C0BF237EA4EE9 /* PracticeListView.swift */; };
+		09EE024D68DD4F1E707FD79F /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B00B6792607857459062B1 /* L10n.swift */; };
+		0A94CACFB46A151FB7293073 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38855878158B5FFB0D02BE7 /* OnboardingView.swift */; };
+		0AC8148767EA204C6B516990 /* PredictionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07A667089737A59314F54A /* PredictionService.swift */; };
+		109E14C4721B0DE0F3D323B7 /* AddPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CFEA871112DDC66224F6B /* AddPracticeView.swift */; };
+		272D2EFAB9E360CCBBD591D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E247452A6EE6FE8A08D00 /* ContentView.swift */; };
+		2E0A833861C3A32ECD5D2ED4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D17766C4B86AEB98B5171 /* Constants.swift */; };
+		30EFEC6025C612D1B45A510E /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9A06BD4ADAFFFC8E24F9EB /* Practice.swift */; };
+		3BC666BC06431341A918515F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7147DBF02019793C8B990 /* CounterView.swift */; };
+		3C4F8BAB81ECAF8D67AE9C05 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4697292F60C26120978E9CB3 /* Color+Extensions.swift */; };
+		4458019D8CEDAEA6F28ED92F /* LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4D1779C4241128B6626111 /* LocalizationTests.swift */; };
+		502E4F774688779517AB3AC5 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E6EDF3357486B69A348AD /* Reminder.swift */; };
+		5398C5D18072AD407483162E /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16A9AAD25AB0DBA2D39EDB0 /* Date+Extensions.swift */; };
+		558AA00D892CA29A72F1FB6C /* PracticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63422C276BBEEB57F16B5 /* PracticeService.swift */; };
+		5FD81EF3360CA4ABFA05F8F8 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = C35DBB4F54B9D7820BD62549 /* Sounds */; };
+		62BABD697AEF2D2F64959850 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34295560168137E3F3595BC1 /* UserSettings.swift */; };
+		65AD9ACE64B9E88C91B034C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDED5210DBBDACFEB00EF041 /* Assets.xcassets */; };
+		794A01C2E86F0F969D4BD04A /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C39ED8D70CAC49E21D786C /* StatisticsView.swift */; };
+		7CC3A716ACBC6267F06E5357 /* MilestoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3455DCF875E7F9A62E142 /* MilestoneService.swift */; };
+		7DAD5AAE5EF7F858BE11A6EF /* NyndroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7405BB8287EA50C108491F /* NyndroApp.swift */; };
+		7E21D5BF853F61FCA15C1894 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497A8DEF0B3C31039796E6F /* SettingsView.swift */; };
+		80F677576F4DC0771FF6A379 /* PredefinedPractices.json in Resources */ = {isa = PBXBuildFile; fileRef = 1680978F4E2BF5093102131E /* PredefinedPractices.json */; };
+		9803FD45BB4A5B8BB79AA960 /* HistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928C13CA2425301155B9867 /* HistoryListView.swift */; };
+		A3134DD0D6273BCC358BA0E0 /* PracticeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A322EE6E6881095D80BF816 /* PracticeCardView.swift */; };
+		A8CC431C3A4BAFA63A17954F /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2809C4E4DEC6818AB1C702D6 /* HapticService.swift */; };
+		A94573CA411EF70287879685 /* PracticeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0803120D9B5C4AAD27FD6F /* PracticeDetailView.swift */; };
+		AB77AE098DF64CAEB0262C26 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12787C160E1A0BDC3B0BF0C5 /* Localizable.strings */; };
+		B8073420F4C1B8300D242A2C /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7B033D0E6DA486DB3BB89D /* SoundService.swift */; };
+		B8C364491886F622E51A6BA3 /* PracticeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105A45317494BCA71E315C6 /* PracticeColors.swift */; };
+		BA081AA779001D5E3E4B1E3A /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DFA5CD9EE226B67675D8C /* HistoryEntry.swift */; };
+		C3DC9EA6C4FDD25825FA4CCB /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3C5BF379E1E3DAD7CD1A3 /* Typography.swift */; };
+		DED10F4A21CEA11D6D4A08FC /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315811866E8AADE51B3660C /* ThemeColors.swift */; };
+		F3907A47942039546E85B5B1 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C114FA7B16C620B444D6165 /* String+Localization.swift */; };
+		FA508BC128DC9A8A4BB45EB8 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F65E351225C43589D48297E /* Spacing.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB6B1A8BCA181D0B0F424735 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD06A6FB3970B078E688A91D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B28840F9C594B8290BB7DEF;
+			remoteInfo = Nyndro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04C7147DBF02019793C8B990 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		083832E0B49D365BA49A587C /* Nyndro.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Nyndro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A322EE6E6881095D80BF816 /* PracticeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCardView.swift; sourceTree = "<group>"; };
+		0C114FA7B16C620B444D6165 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		12A67270427045D12AB24FB5 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1680978F4E2BF5093102131E /* PredefinedPractices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PredefinedPractices.json; sourceTree = "<group>"; };
+		19E63422C276BBEEB57F16B5 /* PracticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeService.swift; sourceTree = "<group>"; };
+		1F9D17766C4B86AEB98B5171 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2809C4E4DEC6818AB1C702D6 /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticService.swift; sourceTree = "<group>"; };
+		2F07A667089737A59314F54A /* PredictionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionService.swift; sourceTree = "<group>"; };
+		3105A45317494BCA71E315C6 /* PracticeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeColors.swift; sourceTree = "<group>"; };
+		34295560168137E3F3595BC1 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		369E8D0B2F5AF7447CD248F6 /* StatisticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsService.swift; sourceTree = "<group>"; };
+		3D7B033D0E6DA486DB3BB89D /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		44C39ED8D70CAC49E21D786C /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		4697292F60C26120978E9CB3 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		52E3C5BF379E1E3DAD7CD1A3 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		6F65E351225C43589D48297E /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		7E7405BB8287EA50C108491F /* NyndroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyndroApp.swift; sourceTree = "<group>"; };
+		8928C13CA2425301155B9867 /* HistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListView.swift; sourceTree = "<group>"; };
+		8E9A06BD4ADAFFFC8E24F9EB /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
+		9F4E319EA89C0BF237EA4EE9 /* PracticeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeListView.swift; sourceTree = "<group>"; };
+		A16A9AAD25AB0DBA2D39EDB0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		A497A8DEF0B3C31039796E6F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A525EDDECB491AA5F371B7A5 /* NyndroTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NyndroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A923791665675E3CF7293B9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA0803120D9B5C4AAD27FD6F /* PracticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDetailView.swift; sourceTree = "<group>"; };
+		B38855878158B5FFB0D02BE7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B56CFEA871112DDC66224F6B /* AddPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPracticeView.swift; sourceTree = "<group>"; };
+		C1B00B6792607857459062B1 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		C2E3455DCF875E7F9A62E142 /* MilestoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneService.swift; sourceTree = "<group>"; };
+		C35DBB4F54B9D7820BD62549 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = Nyndro/Resources/Sounds; sourceTree = SOURCE_ROOT; };
+		D315811866E8AADE51B3660C /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
+		DDED5210DBBDACFEB00EF041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E04DFA5CD9EE226B67675D8C /* HistoryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEntry.swift; sourceTree = "<group>"; };
+		E14A6D60C89904F95E47E779 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E64E6EDF3357486B69A348AD /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		EB4D1779C4241128B6626111 /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
+		F43E247452A6EE6FE8A08D00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00088A7F6FF7C3A0FE29C98B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B38855878158B5FFB0D02BE7 /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		007C7D6B37EE107FDA06A643 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04C7147DBF02019793C8B990 /* CounterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0AF9639516398C33D2E84B77 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		10097FB5A48F66B4874A832E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		10EB11E829A13E593B2483B4 /* NyndroTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB4D1779C4241128B6626111 /* LocalizationTests.swift */,
+			);
+			path = NyndroTests;
+			sourceTree = "<group>";
+		};
+		144D662AD86F87071C69D1BB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				612826F91C9DBEA53EDDE6C7 /* Extensions */,
+				33D5EF70B3982AA4A6BF01F7 /* Models */,
+				6E08BCCAB6C70C63F004D24E /* Services */,
+				A8897B3A5CDE5C3C72AE31ED /* Theme */,
+				6321DF9E8DB498B39637B2AD /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		16803F6BC9F744F768A09C43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8928C13CA2425301155B9867 /* HistoryListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33D5EF70B3982AA4A6BF01F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E04DFA5CD9EE226B67675D8C /* HistoryEntry.swift */,
+				8E9A06BD4ADAFFFC8E24F9EB /* Practice.swift */,
+				E64E6EDF3357486B69A348AD /* Reminder.swift */,
+				34295560168137E3F3595BC1 /* UserSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38E54000790E0EE35C4FFFA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42A0AB8B372F31D723F9FF08 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4389B436A69176086C6F7F37 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		481554FEFE47F259E12A484D /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				0AF9639516398C33D2E84B77 /* ViewModels */,
+				007C7D6B37EE107FDA06A643 /* Views */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		4858EF6917A034CE525AA161 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52C9C2ACDB59E27EA7815A01 /* Practices */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B0F97FA594428E05B4586 /* ViewModels */,
+				D9D51478DF3942C1062DA576 /* Views */,
+			);
+			path = Practices;
+			sourceTree = "<group>";
+		};
+		56C85016841E50F0867300A7 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				4389B436A69176086C6F7F37 /* ViewModels */,
+				676813674C7B3789AB4A997E /* Views */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		612826F91C9DBEA53EDDE6C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4697292F60C26120978E9CB3 /* Color+Extensions.swift */,
+				A16A9AAD25AB0DBA2D39EDB0 /* Date+Extensions.swift */,
+				0C114FA7B16C620B444D6165 /* String+Localization.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6321DF9E8DB498B39637B2AD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1F9D17766C4B86AEB98B5171 /* Constants.swift */,
+				C1B00B6792607857459062B1 /* L10n.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		676813674C7B3789AB4A997E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44C39ED8D70CAC49E21D786C /* StatisticsView.swift */,
+				EAFABCA381BE24EDAE510996 /* Charts */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C353D35D3E5768375D68042 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AC48F1D87C2B42EA3089869E /* ViewModels */,
+				FF14DAEF2D15129F3DA307B1 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		6D0AD6B241658B4BD6F46221 /* Nyndro */ = {
+			isa = PBXGroup;
+			children = (
+				12787C160E1A0BDC3B0BF0C5 /* Localizable.strings */,
+				9149DA963965F2CECFBE9B5B /* App */,
+				77B190F45BB45EC138D101FF /* Components */,
+				144D662AD86F87071C69D1BB /* Core */,
+				7AFCAB5A997DE3AE242CFE81 /* Features */,
+				42A0AB8B372F31D723F9FF08 /* Preview Content */,
+				10097FB5A48F66B4874A832E /* Services */,
+			);
+			path = Nyndro;
+			sourceTree = "<group>";
+		};
+		6E08BCCAB6C70C63F004D24E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2809C4E4DEC6818AB1C702D6 /* HapticService.swift */,
+				C2E3455DCF875E7F9A62E142 /* MilestoneService.swift */,
+				19E63422C276BBEEB57F16B5 /* PracticeService.swift */,
+				2F07A667089737A59314F54A /* PredictionService.swift */,
+				3D7B033D0E6DA486DB3BB89D /* SoundService.swift */,
+				369E8D0B2F5AF7447CD248F6 /* StatisticsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6E5B0F97FA594428E05B4586 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		77B190F45BB45EC138D101FF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E646558FB74699AD3871677 /* ProgressBar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7AFCAB5A997DE3AE242CFE81 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				481554FEFE47F259E12A484D /* Counter */,
+				DFC98A74CAA51899C4A51EFE /* History */,
+				A02B99DE3A137582E5E1F812 /* Onboarding */,
+				52C9C2ACDB59E27EA7815A01 /* Practices */,
+				FCF57B3B062C27F850F2D7FA /* Reminders */,
+				6C353D35D3E5768375D68042 /* Settings */,
+				56C85016841E50F0867300A7 /* Statistics */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7E646558FB74699AD3871677 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
+		83D0E5A765D05BD395D94BED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDED5210DBBDACFEB00EF041 /* Assets.xcassets */,
+				1680978F4E2BF5093102131E /* PredefinedPractices.json */,
+			);
+			name = Resources;
+			path = Nyndro/Resources;
+			sourceTree = "<group>";
+		};
+		8757F946362EC12E57894AB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				083832E0B49D365BA49A587C /* Nyndro.app */,
+				A525EDDECB491AA5F371B7A5 /* NyndroTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9149DA963965F2CECFBE9B5B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F43E247452A6EE6FE8A08D00 /* ContentView.swift */,
+				7E7405BB8287EA50C108491F /* NyndroApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A02B99DE3A137582E5E1F812 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A057E832B2B4729DFA2183DB /* ViewModels */,
+				00088A7F6FF7C3A0FE29C98B /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A057E832B2B4729DFA2183DB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A8897B3A5CDE5C3C72AE31ED /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				3105A45317494BCA71E315C6 /* PracticeColors.swift */,
+				6F65E351225C43589D48297E /* Spacing.swift */,
+				D315811866E8AADE51B3660C /* ThemeColors.swift */,
+				52E3C5BF379E1E3DAD7CD1A3 /* Typography.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		A9832AC3FE4C864C680351C0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AC48F1D87C2B42EA3089869E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C4AF7BAC0DFD48FF4AC55379 = {
+			isa = PBXGroup;
+			children = (
+				C35DBB4F54B9D7820BD62549 /* Sounds */,
+				6D0AD6B241658B4BD6F46221 /* Nyndro */,
+				10EB11E829A13E593B2483B4 /* NyndroTests */,
+				83D0E5A765D05BD395D94BED /* Resources */,
+				8757F946362EC12E57894AB8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9D51478DF3942C1062DA576 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B56CFEA871112DDC66224F6B /* AddPracticeView.swift */,
+				0A322EE6E6881095D80BF816 /* PracticeCardView.swift */,
+				AA0803120D9B5C4AAD27FD6F /* PracticeDetailView.swift */,
+				9F4E319EA89C0BF237EA4EE9 /* PracticeListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFC98A74CAA51899C4A51EFE /* History */ = {
+			isa = PBXGroup;
+			children = (
+				A9832AC3FE4C864C680351C0 /* ViewModels */,
+				16803F6BC9F744F768A09C43 /* Views */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		EAFABCA381BE24EDAE510996 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		FCF57B3B062C27F850F2D7FA /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				4858EF6917A034CE525AA161 /* ViewModels */,
+				38E54000790E0EE35C4FFFA5 /* Views */,
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
+		FF14DAEF2D15129F3DA307B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A497A8DEF0B3C31039796E6F /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2334B9578E129D6078B5855C /* NyndroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C33B11227DB7F914476C35F /* Build configuration list for PBXNativeTarget "NyndroTests" */;
+			buildPhases = (
+				2E9063085D99233D9CC02170 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88878154F33CD8086C380C44 /* PBXTargetDependency */,
+			);
+			name = NyndroTests;
+			packageProductDependencies = (
+			);
+			productName = NyndroTests;
+			productReference = A525EDDECB491AA5F371B7A5 /* NyndroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B28840F9C594B8290BB7DEF /* Nyndro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76720A523C299E7E919A8D08 /* Build configuration list for PBXNativeTarget "Nyndro" */;
+			buildPhases = (
+				62C0F1EDE916AD560A0780DE /* Validate Localizations */,
+				CC40574CC4074D152F9D90C1 /* Sources */,
+				A6D777D9523CD3F306B02219 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nyndro;
+			packageProductDependencies = (
+			);
+			productName = Nyndro;
+			productReference = 083832E0B49D365BA49A587C /* Nyndro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD06A6FB3970B078E688A91D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					2334B9578E129D6078B5855C = {
+						DevelopmentTeam = JMMW48F6X4;
+						ProvisioningStyle = Automatic;
+					};
+					8B28840F9C594B8290BB7DEF = {
+						DevelopmentTeam = JMMW48F6X4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9E6EF7FD35920233B12C68A0 /* Build configuration list for PBXProject "Nyndro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				de,
+				en,
+				pl,
+			);
+			mainGroup = C4AF7BAC0DFD48FF4AC55379;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B28840F9C594B8290BB7DEF /* Nyndro */,
+				2334B9578E129D6078B5855C /* NyndroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6D777D9523CD3F306B02219 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65AD9ACE64B9E88C91B034C7 /* Assets.xcassets in Resources */,
+				AB77AE098DF64CAEB0262C26 /* Localizable.strings in Resources */,
+				80F677576F4DC0771FF6A379 /* PredefinedPractices.json in Resources */,
+				5FD81EF3360CA4ABFA05F8F8 /* Sounds in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62C0F1EDE916AD560A0780DE /* Validate Localizations */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Validate Localizations";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f \"${SRCROOT}/Scripts/validate_localizations.sh\" ]; then\n  bash \"${SRCROOT}/Scripts/validate_localizations.sh\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E9063085D99233D9CC02170 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4458019D8CEDAEA6F28ED92F /* LocalizationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC40574CC4074D152F9D90C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				109E14C4721B0DE0F3D323B7 /* AddPracticeView.swift in Sources */,
+				3C4F8BAB81ECAF8D67AE9C05 /* Color+Extensions.swift in Sources */,
+				2E0A833861C3A32ECD5D2ED4 /* Constants.swift in Sources */,
+				272D2EFAB9E360CCBBD591D3 /* ContentView.swift in Sources */,
+				3BC666BC06431341A918515F /* CounterView.swift in Sources */,
+				5398C5D18072AD407483162E /* Date+Extensions.swift in Sources */,
+				A8CC431C3A4BAFA63A17954F /* HapticService.swift in Sources */,
+				BA081AA779001D5E3E4B1E3A /* HistoryEntry.swift in Sources */,
+				9803FD45BB4A5B8BB79AA960 /* HistoryListView.swift in Sources */,
+				09EE024D68DD4F1E707FD79F /* L10n.swift in Sources */,
+				7CC3A716ACBC6267F06E5357 /* MilestoneService.swift in Sources */,
+				7DAD5AAE5EF7F858BE11A6EF /* NyndroApp.swift in Sources */,
+				0A94CACFB46A151FB7293073 /* OnboardingView.swift in Sources */,
+				30EFEC6025C612D1B45A510E /* Practice.swift in Sources */,
+				A3134DD0D6273BCC358BA0E0 /* PracticeCardView.swift in Sources */,
+				B8C364491886F622E51A6BA3 /* PracticeColors.swift in Sources */,
+				A94573CA411EF70287879685 /* PracticeDetailView.swift in Sources */,
+				06929B6DE27E511040FA9259 /* PracticeListView.swift in Sources */,
+				558AA00D892CA29A72F1FB6C /* PracticeService.swift in Sources */,
+				0AC8148767EA204C6B516990 /* PredictionService.swift in Sources */,
+				502E4F774688779517AB3AC5 /* Reminder.swift in Sources */,
+				7E21D5BF853F61FCA15C1894 /* SettingsView.swift in Sources */,
+				B8073420F4C1B8300D242A2C /* SoundService.swift in Sources */,
+				FA508BC128DC9A8A4BB45EB8 /* Spacing.swift in Sources */,
+				03F8BA95154F0AF882873CDE /* StatisticsService.swift in Sources */,
+				794A01C2E86F0F969D4BD04A /* StatisticsView.swift in Sources */,
+				F3907A47942039546E85B5B1 /* String+Localization.swift in Sources */,
+				DED10F4A21CEA11D6D4A08FC /* ThemeColors.swift in Sources */,
+				C3DC9EA6C4FDD25825FA4CCB /* Typography.swift in Sources */,
+				62BABD697AEF2D2F64959850 /* UserSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88878154F33CD8086C380C44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B28840F9C594B8290BB7DEF /* Nyndro */;
+			targetProxy = DB6B1A8BCA181D0B0F424735 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		12787C160E1A0BDC3B0BF0C5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E14A6D60C89904F95E47E779 /* de */,
+				A923791665675E3CF7293B9A /* en */,
+				12A67270427045D12AB24FB5 /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A9F4FEB79CDDE0228B0C960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marek.piotrowski.nyndro.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nyndro.app/Nyndro";
+			};
+			name = Release;
+		};
+		484DAF3B743044A4A75EF913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Nyndro;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marek.piotrowski.nyndro;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B6E7C5C7365B404608AF716 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_LANGUAGE = en;
+				DEVELOPMENT_TEAM = JMMW48F6X4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9DDB6BB6F3C40E665925B7F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marek.piotrowski.nyndro.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nyndro.app/Nyndro";
+			};
+			name = Debug;
+		};
+		EBDF76FB48AA97256D74355A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_LANGUAGE = en;
+				DEVELOPMENT_TEAM = JMMW48F6X4;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F5A65E54227F5104831175A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Nyndro;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marek.piotrowski.nyndro;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76720A523C299E7E919A8D08 /* Build configuration list for PBXNativeTarget "Nyndro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				484DAF3B743044A4A75EF913 /* Debug */,
+				F5A65E54227F5104831175A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8C33B11227DB7F914476C35F /* Build configuration list for PBXNativeTarget "NyndroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DDB6BB6F3C40E665925B7F7 /* Debug */,
+				1A9F4FEB79CDDE0228B0C960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9E6EF7FD35920233B12C68A0 /* Build configuration list for PBXProject "Nyndro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6E7C5C7365B404608AF716 /* Debug */,
+				EBDF76FB48AA97256D74355A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD06A6FB3970B078E688A91D /* Project object */;
+}
