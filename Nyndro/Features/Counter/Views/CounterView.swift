@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftData
-import AVFoundation
 
 struct CounterView: View {
     @Environment(\.modelContext) private var modelContext
@@ -21,7 +20,6 @@ struct CounterView: View {
     @State private var showingExitConfirmation = false
     @State private var tapIncrement: Int = 1
     @State private var showingIncrementPicker = false
-    @State private var audioPlayer: AVAudioPlayer?
     @State private var showingCelebration = false
     
     private var userSettings: UserSettings {
@@ -63,7 +61,6 @@ struct CounterView: View {
         .statusBar(hidden: true)
         .persistentSystemOverlays(.hidden)
         .onAppear {
-            setupAudio()
             applyScreenSettings()
             tapIncrement = practice.defaultRepetition
         }
@@ -306,23 +303,8 @@ struct CounterView: View {
     
     // MARK: - Audio & Haptics
     
-    private func setupAudio() {
-        guard let soundFile = userSettings.counterSound.fileName,
-              let url = Bundle.main.url(forResource: soundFile, withExtension: "mp3") else {
-            return
-        }
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.prepareToPlay()
-        } catch {
-            print("Failed to setup audio: \(error)")
-        }
-    }
-    
     private func playSound() {
-        guard userSettings.counterSound != .none else { return }
-        audioPlayer?.play()
+        SoundService.shared.play(sound: userSettings.counterSound)
     }
     
     private func triggerHaptic() {

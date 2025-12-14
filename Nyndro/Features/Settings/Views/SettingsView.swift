@@ -139,21 +139,10 @@ struct SettingsView: View {
             }
         )) {
             ForEach(ProgressBarStyle.allCases, id: \.self) { style in
-                HStack {
-                    if style.isSystemIcon {
-                        Image(systemName: style.icon)
-                    } else {
-                        Image(style.icon)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 14, height: 14)
-                    }
-                    Text(style.displayName)
-                }
-                .tag(style)
+                Text(style.displayName)
+                    .tag(style)
             }
         }
-        .pickerStyle(.menu)
     }
     
     // MARK: - Sound Picker
@@ -278,7 +267,7 @@ struct AboutView: View {
                     .padding(.top, Spacing.xl)
                 
                 // App Name
-                Text("Nyndro")
+                Text(L10n.App.name)
                     .font(Typography.largeTitle)
                     .foregroundColor(Color.theme.textPrimary)
                 
