@@ -56,6 +56,14 @@ struct PracticeDetailView: View {
                         Label(L10n.Practice.reminders, systemImage: "bell")
                     }
                     
+                    NavigationLink {
+                        PracticeHistoryView(practice: practice)
+                    } label: {
+                        Label(L10n.Practice.editHistory, systemImage: "clock.arrow.circlepath")
+                    }
+                    
+                    Divider()
+                    
                     Button(action: { showingAddManual = true }) {
                         Label(L10n.Practice.addManual, systemImage: "plus.circle")
                     }
@@ -438,43 +446,88 @@ struct EditPracticeSheet: View {
 // MARK: - Practice History View
 
 struct PracticeHistoryView: View {
-    let practice: Practice
+    @Environment(\.modelContext) private var modelContext
+    @Bindable var practice: Practice
+    
+    @State private var showingDeleteConfirmation = false
+    @State private var entryToDelete: HistoryEntry?
+    @AppStorage("hasSeenHistorySwipeHint") private var hasSeenSwipeHint = false
     
     var sortedHistory: [HistoryEntry] {
         practice.history.sorted(by: >)
     }
     
     var body: some View {
-        List {
-            ForEach(sortedHistory) { entry in
-                HStack {
-                    VStack(alignment: .leading, spacing: Spacing.xxs) {
-                        Text(entry.formattedDateTime)
-                            .font(Typography.body)
-                        
-                        if let note = entry.note, !note.isEmpty {
-                            Text(note)
-                                .font(Typography.caption)
-                                .foregroundColor(Color.theme.textSecondary)
+        VStack(spacing: 0) {
+            // Swipe hint banner (shown once)
+            if !hasSeenSwipeHint && !sortedHistory.isEmpty {
+                SwipeHintBanner {
+                    withAnimation {
+                        hasSeenSwipeHint = true
+                    }
+                }
+                .padding(.horizontal, Spacing.screenHorizontal)
+                .padding(.vertical, Spacing.sm)
+            }
+            
+            List {
+                ForEach(sortedHistory) { entry in
+                    HStack {
+                        VStack(alignment: .leading, spacing: Spacing.xxs) {
+                            Text(entry.formattedDateTime)
+                                .font(Typography.body)
+                            
+                            if let note = entry.note, !note.isEmpty {
+                                Text(note)
+                                    .font(Typography.caption)
+                                    .foregroundColor(Color.theme.textSecondary)
+                            }
+                            
+                            if let duration = entry.formattedDuration {
+                                Text(L10n.Practice.duration(duration))
+                                    .font(Typography.caption)
+                                    .foregroundColor(Color.theme.textTertiary)
+                            }
                         }
                         
-                        if let duration = entry.formattedDuration {
-                            Text(L10n.Practice.duration(duration))
-                                .font(Typography.caption)
-                                .foregroundColor(Color.theme.textTertiary)
+                        Spacer()
+                        
+                        Text("+\(entry.repetitionAdded)")
+                            .font(Typography.headline)
+                            .foregroundColor(practice.color)
+                    }
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                        Button(role: .destructive) {
+                            entryToDelete = entry
+                            showingDeleteConfirmation = true
+                        } label: {
+                            Label(L10n.Common.delete, systemImage: "trash")
                         }
                     }
-                    
-                    Spacer()
-                    
-                    Text("+\(entry.repetitionAdded)")
-                        .font(Typography.headline)
-                        .foregroundColor(practice.color)
                 }
             }
+            .listStyle(.insetGrouped)
         }
-        .navigationTitle(L10n.Tab.history)
+        .navigationTitle(L10n.Practice.editHistory)
         .navigationBarTitleDisplayMode(.inline)
+        .alert(L10n.Common.delete, isPresented: $showingDeleteConfirmation) {
+            Button(L10n.Common.cancel, role: .cancel) { }
+            Button(L10n.Common.delete, role: .destructive) {
+                if let entry = entryToDelete {
+                    deleteEntry(entry)
+                }
+            }
+        } message: {
+            Text(History.deleteConfirmation)
+        }
+    }
+    
+    private func deleteEntry(_ entry: HistoryEntry) {
+        // Subtract from practice progress
+        practice.subtractRepetitions(entry.repetitionAdded)
+        // Delete entry
+        modelContext.delete(entry)
+        try? modelContext.save()
     }
 }
 

@@ -182,6 +182,7 @@
 // MARK: - History
 "history.delete.confirmation" = "Are you sure you want to delete this entry?";
 "history.total_count" = "Total: %d";
+"history.swipe_hint" = "Swipe left to delete entries";
 
 // MARK: - Practice Additional
 "practice.unknown" = "Unknown Practice";
@@ -192,6 +193,7 @@
 "practice.duration" = "Duration: %@";
 "practice.add_manual.message" = "Enter the number of repetitions to add manually";
 "practice.reminders" = "Reminders";
+"practice.edit_history" = "Edit History";
 
 // MARK: - Statistics Charts
 "statistics.weekday_activity" = "Activity by Day";

@@ -83,8 +83,10 @@ struct RemindersListView: View {
             
             Button(action: { showingAddReminder = true }) {
                 Label(L10n.Reminder.add, systemImage: "plus")
+                    .foregroundColor(.white)
             }
             .buttonStyle(.borderedProminent)
+            .tint(Color.theme.accent)
             .padding(.top, Spacing.sm)
         }
         .frame(maxWidth: .infinity)

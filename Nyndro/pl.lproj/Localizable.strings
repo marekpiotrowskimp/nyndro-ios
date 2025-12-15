@@ -182,6 +182,7 @@
 // MARK: - History
 "history.delete.confirmation" = "Czy na pewno chcesz usunąć ten wpis?";
 "history.total_count" = "Razem: %d";
+"history.swipe_hint" = "Przesuń w lewo aby usunąć wpisy";
 
 // MARK: - Practice Additional
 "practice.unknown" = "Nieznana praktyka";
@@ -192,6 +193,7 @@
 "practice.duration" = "Czas trwania: %@";
 "practice.add_manual.message" = "Wpisz liczbę powtórzeń do dodania ręcznie";
 "practice.reminders" = "Przypomnienia";
+"practice.edit_history" = "Edytuj historię";
 
 // MARK: - Statistics Charts
 "statistics.weekday_activity" = "Aktywność według dnia";

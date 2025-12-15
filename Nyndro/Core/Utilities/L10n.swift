@@ -81,6 +81,7 @@ enum L10n {
         static let recentHistory = "practice.recent_history".localized(default: "Recent History")
         static let noHistory = "practice.no_history".localized(default: "No practice history yet")
         static let reminders = "practice.reminders".localized(default: "Reminders")
+        static let editHistory = "practice.edit_history".localized(default: "Edit History")
         
         enum Add {
             static let predefined = "practice.add.predefined".localized(default: "Predefined Practices")
@@ -299,6 +300,7 @@ enum Filter {
 
 enum History {
     static let deleteConfirmation = "history.delete.confirmation".localized(default: "Are you sure you want to delete this entry?")
+    static let swipeHint = "history.swipe_hint".localized(default: "Swipe left to delete entries")
     
     static func totalCount(_ count: Int) -> String {
         String(format: "history.total_count".localized(default: "Total: %d"), count)

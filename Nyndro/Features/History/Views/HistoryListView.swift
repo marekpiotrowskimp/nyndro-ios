@@ -20,6 +20,8 @@ struct HistoryListView: View {
     @State private var showingDeleteConfirmation = false
     @State private var entryToDelete: HistoryEntry?
     
+    @AppStorage("hasSeenHistorySwipeHint") private var hasSeenSwipeHint = false
+    
     private var filteredHistory: [HistoryEntry] {
         if let practice = selectedPractice {
             return allHistory.filter { $0.practice?.id == practice.id }
@@ -82,35 +84,40 @@ struct HistoryListView: View {
     // MARK: - History Content
     
     private var historyContent: some View {
-        ScrollView {
-            LazyVStack(spacing: Spacing.lg, pinnedViews: [.sectionHeaders]) {
-                // Filter chips
-                if practices.count > 1 {
-                    filterChips
-                        .padding(.bottom, Spacing.sm)
+        VStack(spacing: 0) {
+            // Filter chips
+            if practices.count > 1 {
+                filterChips
+                    .padding(.vertical, Spacing.sm)
+            }
+            
+            // Swipe hint banner (shown once)
+            if !hasSeenSwipeHint && !filteredHistory.isEmpty {
+                SwipeHintBanner {
+                    withAnimation {
+                        hasSeenSwipeHint = true
+                    }
                 }
-                
-                // Grouped history
+                .padding(.horizontal, Spacing.screenHorizontal)
+                .padding(.bottom, Spacing.sm)
+            }
+            
+            // History list with swipe actions
+            List {
                 ForEach(groupedHistory, id: \.0) { dateString, entries in
                     Section {
-                        VStack(spacing: Spacing.sm) {
-                            ForEach(entries) { entry in
-                                HistoryRowView(entry: entry)
-                                    .contextMenu {
-                                        if let note = entry.note, !note.isEmpty {
-                                            Button(action: {}) {
-                                                Label(note, systemImage: "note.text")
-                                            }
-                                        }
-                                        
-                                        Button(role: .destructive, action: {
-                                            entryToDelete = entry
-                                            showingDeleteConfirmation = true
-                                        }) {
-                                            Label(L10n.Common.delete, systemImage: "trash")
-                                        }
+                        ForEach(entries) { entry in
+                            HistoryRowView(entry: entry)
+                                .listRowInsets(EdgeInsets(top: Spacing.xs, leading: Spacing.screenHorizontal, bottom: Spacing.xs, trailing: Spacing.screenHorizontal))
+                                .listRowBackground(Color.theme.cardBackground)
+                                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                    Button(role: .destructive) {
+                                        entryToDelete = entry
+                                        showingDeleteConfirmation = true
+                                    } label: {
+                                        Label(L10n.Common.delete, systemImage: "trash")
                                     }
-                            }
+                                }
                         }
                     } header: {
                         HStack {
@@ -124,13 +131,13 @@ struct HistoryListView: View {
                                 .font(Typography.caption)
                                 .foregroundColor(Color.theme.textTertiary)
                         }
-                        .padding(.vertical, Spacing.xs)
-                        .padding(.horizontal, Spacing.screenHorizontal)
-                        .background(Color.theme.background)
+                        .textCase(nil)
                     }
                 }
             }
-            .padding(.top, Spacing.md)
+            .listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden)
+            .background(Color.theme.background)
         }
     }
     
@@ -177,6 +184,33 @@ struct HistoryListView: View {
         // Delete entry
         modelContext.delete(entry)
         try? modelContext.save()
+    }
+}
+
+// MARK: - Swipe Hint Banner
+
+struct SwipeHintBanner: View {
+    let onDismiss: () -> Void
+    
+    var body: some View {
+        HStack(spacing: Spacing.sm) {
+            Image(systemName: "hand.point.left.fill")
+                .foregroundColor(Color.theme.info)
+            
+            Text(History.swipeHint)
+                .font(Typography.caption)
+                .foregroundColor(Color.theme.textSecondary)
+            
+            Spacer()
+            
+            Button(action: onDismiss) {
+                Image(systemName: "xmark.circle.fill")
+                    .foregroundColor(Color.theme.textTertiary)
+            }
+        }
+        .padding(Spacing.sm)
+        .background(Color.theme.info.opacity(0.1))
+        .cornerRadius(Spacing.cardRadius)
     }
 }
 
@@ -248,11 +282,7 @@ struct HistoryRowView: View {
                 .font(Typography.headline)
                 .foregroundColor(entry.practice?.color ?? Color.theme.accent)
         }
-        .padding(Spacing.cardPadding)
-        .background(Color.theme.cardBackground)
-        .cornerRadius(Spacing.cardRadius)
-        .shadow(color: Color.theme.shadow, radius: 2, x: 0, y: 1)
-        .padding(.horizontal, Spacing.screenHorizontal)
+        .padding(.vertical, Spacing.xs)
     }
 }
 

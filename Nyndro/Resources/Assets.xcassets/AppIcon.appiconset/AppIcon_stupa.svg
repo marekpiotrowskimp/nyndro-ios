@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Background - Navy blue -->
+  <rect width="1024" height="1024" fill="#0D1B2A"/>
+  
+  <!-- Tibetan Stupa - White with subtle stroke -->
+  <g transform="translate(512, 512)">
+    <!-- Base platform - bottom -->
+    <rect x="-280" y="260" width="560" height="50" rx="8" fill="white"/>
+    
+    <!-- Step 1 -->
+    <rect x="-240" y="210" width="480" height="50" rx="6" fill="white"/>
+    
+    <!-- Step 2 -->
+    <rect x="-200" y="160" width="400" height="50" rx="5" fill="white"/>
+    
+    <!-- Step 3 -->
+    <rect x="-160" y="110" width="320" height="50" rx="4" fill="white"/>
+    
+    <!-- Dome (Anda/Bumpa) - Main body -->
+    <ellipse cx="0" cy="30" rx="140" ry="100" fill="white"/>
+    
+    <!-- Harmika (square part with Buddha eyes) -->
+    <rect x="-80" y="-90" width="160" height="70" rx="4" fill="white"/>
+    
+    <!-- Eyes decoration line -->
+    <rect x="-60" y="-70" width="120" height="6" rx="3" fill="#0D1B2A"/>
+    
+    <!-- 13 rings/steps (Chhatra) - representing path to enlightenment -->
+    <g>
+      <!-- Ring group - tapered cone -->
+      <rect x="-70" y="-160" width="140" height="12" rx="2" fill="white"/>
+      <rect x="-64" y="-175" width="128" height="10" rx="2" fill="white"/>
+      <rect x="-58" y="-188" width="116" height="10" rx="2" fill="white"/>
+      <rect x="-52" y="-201" width="104" height="10" rx="2" fill="white"/>
+      <rect x="-46" y="-214" width="92" height="10" rx="2" fill="white"/>
+      <rect x="-40" y="-227" width="80" height="10" rx="2" fill="white"/>
+      <rect x="-34" y="-240" width="68" height="10" rx="2" fill="white"/>
+      <rect x="-28" y="-253" width="56" height="10" rx="2" fill="white"/>
+      <rect x="-22" y="-266" width="44" height="10" rx="2" fill="white"/>
+      <rect x="-16" y="-279" width="32" height="10" rx="2" fill="white"/>
+      <rect x="-12" y="-292" width="24" height="10" rx="2" fill="white"/>
+      <rect x="-8" y="-305" width="16" height="10" rx="2" fill="white"/>
+      <rect x="-5" y="-318" width="10" height="10" rx="2" fill="white"/>
+    </g>
+    
+    <!-- Gajur (top ornament) -->
+    <!-- Moon crescent -->
+    <path d="M -20 -340 Q 0 -360 20 -340 Q 0 -330 -20 -340" fill="white"/>
+    
+    <!-- Sun disc -->
+    <circle cx="0" cy="-365" r="18" fill="white"/>
+    
+    <!-- Jewel/flame on top -->
+    <path d="M 0 -420 Q -12 -395 -8 -380 Q 0 -390 8 -380 Q 12 -395 0 -420" fill="white"/>
+  </g>
+</svg>
