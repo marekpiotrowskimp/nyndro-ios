@@ -129,6 +129,13 @@
 "settings.export_title" = "Daten exportieren";
 "settings.export_json" = "Als JSON exportieren";
 "settings.export_csv" = "Als CSV exportieren";
+"settings.export_message" = "Wähle ein Format für den Export";
+"settings.export_error" = "Export fehlgeschlagen";
+"settings.import_title" = "Daten importieren";
+"settings.import_mode_message" = "Wie möchtest du die Daten importieren?";
+"settings.import_error" = "Import fehlgeschlagen";
+"settings.import_success" = "Import erfolgreich";
+"settings.data_footer" = "Exportiere deine Daten als Backup oder zur Übertragung auf ein anderes Gerät";
 "settings.version" = "Version";
 
 // MARK: - Settings Sound & Haptic
