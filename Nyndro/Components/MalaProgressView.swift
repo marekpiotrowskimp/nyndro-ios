@@ -116,12 +116,17 @@ struct MalaProgressView: View {
     }
     
     private func angleForBead(_ index: Int) -> Double {
-        // Start from top and go clockwise, leaving gap at bottom for guru bead
-        let startAngle = -90.0 // 12 o'clock
-        // Leave space at bottom for guru bead (skip about 1.5 bead positions)
-        let totalAngle = 330.0 // 360 - 30 degrees gap for guru bead area
-        let anglePerBead = totalAngle / Double(beadCount)
-        return (startAngle + Double(index) * anglePerBead + 15) * .pi / 180
+        // Start after guru bead gap and go clockwise
+        // Guru bead is at 270° (bottom), gap of 30° total (15° each side)
+        // First bead at 285° (-75°), last bead at 255°
+        let gapDegrees = 30.0
+        let startAngle = 270.0 + gapDegrees / 2  // 285° = first bead position
+        // Distribute beads evenly from first to last position
+        // 27 beads need 26 intervals to span 330°
+        let totalArc = 360.0 - gapDegrees  // 330°
+        let anglePerBead = totalArc / Double(beadCount - 1)  // 330 / 26 = 12.69°
+        let angle = startAngle + Double(index) * anglePerBead
+        return angle * .pi / 180
     }
     
     private func beadColor(isFilled: Bool, index: Int) -> Color {
