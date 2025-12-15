@@ -4,6 +4,7 @@
 //
 //  Beautiful lotus flower progress visualization
 //  Lotus blooms as progress increases, symbolizing spiritual growth
+//  Features a progress aura ring behind the lotus
 //
 
 import SwiftUI
@@ -16,6 +17,7 @@ struct LotusProgressView: View {
     @State private var animatedProgress: Double = 0
     @State private var showPulse: Bool = false
     @State private var showCelebration: Bool = false
+    @State private var glowOpacity: Double = 0.4
     
     // Number of petals
     private let petalCount = 8
@@ -43,6 +45,9 @@ struct LotusProgressView: View {
             let size = min(geometry.size.width, geometry.size.height)
             
             ZStack {
+                // Progress aura - behind everything
+                progressAura(size: size)
+                
                 // Water background
                 waterBackground(size: size)
                 
@@ -70,6 +75,14 @@ struct LotusProgressView: View {
                 }
             } else {
                 animatedProgress = progress
+            }
+            
+            // Start glow pulsing animation
+            withAnimation(
+                .easeInOut(duration: 2.0)
+                .repeatForever(autoreverses: true)
+            ) {
+                glowOpacity = 0.7
             }
             
             if progress >= 1.0 {
@@ -102,6 +115,38 @@ struct LotusProgressView: View {
         }
     }
     
+    // MARK: - Progress Aura
+    
+    private func progressAura(size: CGFloat) -> some View {
+        let lineWidth = size * 0.07
+        let auraSize = size * 0.92
+        
+        return ZStack {
+            // Background track (empty state) - always visible
+            Circle()
+                .stroke(
+                    Color.theme.progressEmpty.opacity(0.4),
+                    lineWidth: lineWidth
+                )
+                .frame(width: auraSize, height: auraSize)
+            
+            // Progress fill with glow
+            Circle()
+                .trim(from: 0, to: animatedProgress)
+                .stroke(
+                    color,
+                    style: StrokeStyle(
+                        lineWidth: lineWidth,
+                        lineCap: .round
+                    )
+                )
+                .rotationEffect(.degrees(-90))
+                .frame(width: auraSize, height: auraSize)
+                .shadow(color: color.opacity(glowOpacity), radius: 8)
+                .shadow(color: color.opacity(glowOpacity * 0.5), radius: 16)
+        }
+    }
+    
     // MARK: - Water Background
     
     private func waterBackground(size: CGFloat) -> some View {
@@ -114,10 +159,10 @@ struct LotusProgressView: View {
                     ],
                     center: .center,
                     startRadius: 0,
-                    endRadius: size / 2
+                    endRadius: size / 2.5
                 )
             )
-            .frame(width: size, height: size)
+            .frame(width: size * 0.75, height: size * 0.75)
     }
     
     // MARK: - Lotus Stem
@@ -312,7 +357,7 @@ private struct PetalPath: Shape {
 #Preview("Lotus Progress") {
     VStack(spacing: 40) {
         HStack(spacing: 20) {
-            LotusProgressView(progress: 0.1, color: .blue)
+            LotusProgressView(progress: 0.0, color: .blue)
                 .frame(width: 100, height: 100)
             
             LotusProgressView(progress: 0.3, color: .purple)

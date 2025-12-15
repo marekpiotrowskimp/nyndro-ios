@@ -3,7 +3,7 @@
 //  Nyndro
 //
 //  Traditional Buddhist mala (prayer beads) progress visualization
-//  108 beads with guru bead at the bottom
+//  27 beads with guru bead and tassel at the bottom
 //
 
 import SwiftUI
@@ -17,8 +17,8 @@ struct MalaProgressView: View {
     @State private var pulsingBead: Int? = nil
     @State private var showCelebration: Bool = false
     
-    // Mala configuration
-    private let beadCount = 108
+    // Mala configuration - 27 beads (traditional smaller mala)
+    private let beadCount = 27
     private let guruBeadAngle: Double = 270 // Bottom position (6 o'clock)
     
     // Current filled bead count
@@ -39,8 +39,8 @@ struct MalaProgressView: View {
                 // Mala beads
                 malaBeads(size: size)
                 
-                // Guru bead (larger bead at bottom)
-                guruBead(size: size)
+                // Guru bead with tassel (larger bead at bottom)
+                guruBeadWithTassel(size: size)
                 
                 // Center content
                 centerContent(size: size)
@@ -92,8 +92,8 @@ struct MalaProgressView: View {
     // MARK: - Mala Beads
     
     private func malaBeads(size: CGFloat) -> some View {
-        let radius = size * 0.4
-        let beadSize = size * 0.035
+        let radius = size * 0.35
+        let beadSize = size * 0.08
         
         return ZStack {
             ForEach(0..<beadCount, id: \.self) { index in
@@ -104,8 +104,8 @@ struct MalaProgressView: View {
                 Circle()
                     .fill(beadColor(isFilled: isFilled, index: index))
                     .frame(width: beadSize, height: beadSize)
-                    .shadow(color: isFilled ? color.opacity(0.3) : .clear, radius: 2)
-                    .scaleEffect(isPulsing ? 1.5 : 1.0)
+                    .shadow(color: isFilled ? color.opacity(0.4) : .clear, radius: 3)
+                    .scaleEffect(isPulsing ? 1.4 : 1.0)
                     .offset(
                         x: cos(angle) * radius,
                         y: sin(angle) * radius
@@ -116,59 +116,150 @@ struct MalaProgressView: View {
     }
     
     private func angleForBead(_ index: Int) -> Double {
-        // Start from top and go clockwise
+        // Start from top and go clockwise, leaving gap at bottom for guru bead
         let startAngle = -90.0 // 12 o'clock
-        let anglePerBead = 360.0 / Double(beadCount)
-        return (startAngle + Double(index) * anglePerBead) * .pi / 180
+        // Leave space at bottom for guru bead (skip about 1.5 bead positions)
+        let totalAngle = 330.0 // 360 - 30 degrees gap for guru bead area
+        let anglePerBead = totalAngle / Double(beadCount)
+        return (startAngle + Double(index) * anglePerBead + 15) * .pi / 180
     }
     
     private func beadColor(isFilled: Bool, index: Int) -> Color {
         if isFilled {
             // Gradient effect - beads get slightly lighter as we go around
-            let gradientFactor = 1.0 - (Double(index) / Double(beadCount)) * 0.2
-            return color.opacity(0.7 + 0.3 * gradientFactor)
+            let gradientFactor = 1.0 - (Double(index) / Double(beadCount)) * 0.15
+            return color.opacity(0.75 + 0.25 * gradientFactor)
         } else {
             return Color.theme.malaBeadEmpty
         }
     }
     
-    // MARK: - Guru Bead
+    // MARK: - Guru Bead with Tassel
     
-    private func guruBead(size: CGFloat) -> some View {
-        let radius = size * 0.4
-        let guruSize = size * 0.06
+    private func guruBeadWithTassel(size: CGFloat) -> some View {
+        let radius = size * 0.35
+        let guruSize = size * 0.12 // 2x larger than regular beads
         let angle = guruBeadAngle * .pi / 180
+        let guruX = cos(angle) * radius
+        let guruY = sin(angle) * radius
         
         let isComplete = animatedProgress >= 1.0
+        let tasselLength = size * 0.12 // 12% of view height
+        let smallBeadSize = size * 0.035 // Small decorative beads
         
         return ZStack {
-            // Guru bead body
+            // Tassel - always visible, 2 threads
+            tasselView(
+                size: size,
+                guruY: guruY,
+                guruSize: guruSize,
+                tasselLength: tasselLength,
+                smallBeadSize: smallBeadSize,
+                isComplete: isComplete
+            )
+            
+            // Guru bead body - same color as practice
             Circle()
                 .fill(
-                    isComplete
-                        ? AnyShapeStyle(LinearGradient(
-                            colors: [color, color.opacity(0.7)],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        ))
-                        : AnyShapeStyle(Color.theme.malaGuruBead)
+                    LinearGradient(
+                        colors: [
+                            isComplete ? color : color.opacity(0.6),
+                            isComplete ? color.opacity(0.8) : color.opacity(0.4)
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
                 )
                 .frame(width: guruSize, height: guruSize)
+                .shadow(color: color.opacity(0.4), radius: isComplete ? 6 : 3)
+                .offset(x: guruX, y: guruY)
+                .scaleEffect(isComplete ? 1.15 : 1.0)
+                .animation(.easeInOut(duration: 0.3), value: isComplete)
             
-            // Tassel representation
-            if isComplete {
-                Rectangle()
-                    .fill(color.opacity(0.6))
-                    .frame(width: 2, height: size * 0.08)
-                    .offset(y: guruSize / 2 + size * 0.04)
-            }
+            // Guru bead inner highlight
+            Circle()
+                .fill(
+                    RadialGradient(
+                        colors: [Color.white.opacity(0.4), Color.clear],
+                        center: .topLeading,
+                        startRadius: 0,
+                        endRadius: guruSize * 0.5
+                    )
+                )
+                .frame(width: guruSize * 0.8, height: guruSize * 0.8)
+                .offset(x: guruX - guruSize * 0.1, y: guruY - guruSize * 0.1)
         }
-        .offset(
-            x: cos(angle) * radius,
-            y: sin(angle) * radius
-        )
-        .scaleEffect(isComplete ? 1.2 : 1.0)
-        .animation(.easeInOut(duration: 0.3), value: isComplete)
+    }
+    
+    // MARK: - Tassel View
+    
+    private func tasselView(
+        size: CGFloat,
+        guruY: CGFloat,
+        guruSize: CGFloat,
+        tasselLength: CGFloat,
+        smallBeadSize: CGFloat,
+        isComplete: Bool
+    ) -> some View {
+        let threadSpacing = size * 0.025 // Space between two threads
+        let startY = guruY + guruSize / 2
+        
+        return ZStack {
+            // Left thread
+            tasselThread(
+                xOffset: -threadSpacing,
+                startY: startY,
+                tasselLength: tasselLength,
+                smallBeadSize: smallBeadSize,
+                isComplete: isComplete
+            )
+            
+            // Right thread
+            tasselThread(
+                xOffset: threadSpacing,
+                startY: startY,
+                tasselLength: tasselLength,
+                smallBeadSize: smallBeadSize,
+                isComplete: isComplete
+            )
+        }
+    }
+    
+    private func tasselThread(
+        xOffset: CGFloat,
+        startY: CGFloat,
+        tasselLength: CGFloat,
+        smallBeadSize: CGFloat,
+        isComplete: Bool
+    ) -> some View {
+        let midBeadY = startY + tasselLength * 0.4
+        let endBeadY = startY + tasselLength
+        
+        return ZStack {
+            // Thread line
+            Path { path in
+                path.move(to: CGPoint(x: xOffset, y: startY))
+                path.addLine(to: CGPoint(x: xOffset, y: startY + tasselLength))
+            }
+            .stroke(
+                color.opacity(isComplete ? 0.8 : 0.5),
+                style: StrokeStyle(lineWidth: 2, lineCap: .round)
+            )
+            
+            // Middle decorative bead
+            Circle()
+                .fill(color.opacity(isComplete ? 0.9 : 0.6))
+                .frame(width: smallBeadSize, height: smallBeadSize)
+                .shadow(color: color.opacity(0.3), radius: 1)
+                .offset(x: xOffset, y: midBeadY)
+            
+            // End decorative bead (slightly larger)
+            Circle()
+                .fill(color.opacity(isComplete ? 1.0 : 0.7))
+                .frame(width: smallBeadSize * 1.2, height: smallBeadSize * 1.2)
+                .shadow(color: color.opacity(0.3), radius: 2)
+                .offset(x: xOffset, y: endBeadY)
+        }
     }
     
     // MARK: - Center Content
@@ -237,20 +328,23 @@ struct CompactMalaView: View {
     let progress: Double
     let color: Color
     
-    private let segments = 27 // Simplified for compact view
+    private let segments = 27 // Matching main mala view
     
     var body: some View {
         GeometryReader { geometry in
             let size = min(geometry.size.width, geometry.size.height)
+            let guruSize = size * 0.1
+            let tasselLength = size * 0.12
+            let smallBeadSize = size * 0.03
             
             ZStack {
                 // Background track
                 Circle()
                     .stroke(Color.theme.progressEmpty, lineWidth: size * 0.08)
                 
-                // Progress arc
+                // Progress arc (leave gap at bottom for guru bead)
                 Circle()
-                    .trim(from: 0, to: progress)
+                    .trim(from: 0.042, to: 0.042 + progress * 0.916) // Gap of ~30 degrees
                     .stroke(
                         color,
                         style: StrokeStyle(
@@ -260,17 +354,26 @@ struct CompactMalaView: View {
                     )
                     .rotationEffect(.degrees(-90))
                 
-                // Bead markers
-                ForEach(0..<segments, id: \.self) { index in
-                    let angle = (Double(index) / Double(segments)) * 360 - 90
-                    let isFilled = Double(index) / Double(segments) <= progress
-                    
-                    Circle()
-                        .fill(isFilled ? color : Color.theme.malaBeadEmpty)
-                        .frame(width: size * 0.06, height: size * 0.06)
-                        .offset(y: -size * 0.4)
-                        .rotationEffect(.degrees(angle))
-                }
+                // Guru bead at bottom
+                Circle()
+                    .fill(
+                        LinearGradient(
+                            colors: [color.opacity(0.8), color.opacity(0.5)],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+                    .frame(width: guruSize, height: guruSize)
+                    .shadow(color: color.opacity(0.3), radius: 2)
+                    .offset(y: size * 0.4)
+                
+                // Simplified tassel (2 threads)
+                compactTassel(
+                    size: size,
+                    guruSize: guruSize,
+                    tasselLength: tasselLength,
+                    smallBeadSize: smallBeadSize
+                )
                 
                 // Percentage in center
                 Text("\(Int(progress * 100))%")
@@ -281,6 +384,44 @@ struct CompactMalaView: View {
             .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
         }
     }
+    
+    private func compactTassel(
+        size: CGFloat,
+        guruSize: CGFloat,
+        tasselLength: CGFloat,
+        smallBeadSize: CGFloat
+    ) -> some View {
+        let startY = size * 0.4 + guruSize / 2
+        let threadSpacing = size * 0.02
+        
+        return ZStack {
+            // Left thread
+            Path { path in
+                path.move(to: CGPoint(x: -threadSpacing, y: startY))
+                path.addLine(to: CGPoint(x: -threadSpacing, y: startY + tasselLength))
+            }
+            .stroke(color.opacity(0.5), style: StrokeStyle(lineWidth: 1.5, lineCap: .round))
+            
+            // Right thread
+            Path { path in
+                path.move(to: CGPoint(x: threadSpacing, y: startY))
+                path.addLine(to: CGPoint(x: threadSpacing, y: startY + tasselLength))
+            }
+            .stroke(color.opacity(0.5), style: StrokeStyle(lineWidth: 1.5, lineCap: .round))
+            
+            // End beads
+            Circle()
+                .fill(color.opacity(0.7))
+                .frame(width: smallBeadSize, height: smallBeadSize)
+                .offset(x: -threadSpacing, y: startY + tasselLength)
+            
+            Circle()
+                .fill(color.opacity(0.7))
+                .frame(width: smallBeadSize, height: smallBeadSize)
+                .offset(x: threadSpacing, y: startY + tasselLength)
+        }
+        .offset(x: size / 2, y: 0)
+    }
 }
 
 // MARK: - Preview
@@ -289,28 +430,40 @@ struct CompactMalaView: View {
     VStack(spacing: 40) {
         HStack(spacing: 20) {
             MalaProgressView(progress: 0.1, color: .blue)
-                .frame(width: 100, height: 100)
+                .frame(width: 120, height: 120)
             
             MalaProgressView(progress: 0.33, color: .purple)
-                .frame(width: 100, height: 100)
+                .frame(width: 120, height: 120)
             
             MalaProgressView(progress: 0.5, color: .pink)
-                .frame(width: 100, height: 100)
+                .frame(width: 120, height: 120)
         }
         
         HStack(spacing: 20) {
             MalaProgressView(progress: 0.75, color: .orange)
-                .frame(width: 100, height: 100)
+                .frame(width: 120, height: 120)
             
             MalaProgressView(progress: 0.9, color: .green)
-                .frame(width: 100, height: 100)
+                .frame(width: 120, height: 120)
             
             MalaProgressView(progress: 1.0, color: .red)
-                .frame(width: 100, height: 100)
+                .frame(width: 120, height: 120)
         }
         
         MalaProgressView(progress: 0.65, color: .indigo, animate: true)
             .frame(width: 200, height: 200)
+        
+        // Compact views
+        HStack(spacing: 20) {
+            CompactMalaView(progress: 0.3, color: .blue)
+                .frame(width: 60, height: 60)
+            
+            CompactMalaView(progress: 0.7, color: .purple)
+                .frame(width: 60, height: 60)
+            
+            CompactMalaView(progress: 1.0, color: .green)
+                .frame(width: 60, height: 60)
+        }
     }
     .padding()
 }
