@@ -131,6 +131,12 @@ struct ThemeColors {
         darkHex: "#404040"
     )
     
+    /// Mala guru bead color
+    static let malaGuruBead = Color(
+        lightHex: "#8B4513",
+        darkHex: "#A0522D"
+    )
+    
     /// Mala string color
     static let malaString = Color(
         lightHex: "#8B4513",

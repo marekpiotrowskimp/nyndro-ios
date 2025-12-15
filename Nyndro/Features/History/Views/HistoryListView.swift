@@ -163,21 +163,7 @@ struct HistoryListView: View {
     // MARK: - Empty State
     
     private var emptyState: some View {
-        VStack(spacing: Spacing.lg) {
-            Image(systemName: "clock")
-                .font(.system(size: 64))
-                .foregroundColor(Color.theme.textTertiary)
-            
-            Text(L10n.Empty.History.title)
-                .font(Typography.title2)
-                .foregroundColor(Color.theme.textPrimary)
-            
-            Text(L10n.Empty.History.message)
-                .font(Typography.body)
-                .foregroundColor(Color.theme.textSecondary)
-                .multilineTextAlignment(.center)
-        }
-        .padding(Spacing.screenHorizontal)
+        EmptyStateView.history
     }
     
     // MARK: - Actions

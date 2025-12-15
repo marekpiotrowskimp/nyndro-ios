@@ -20,7 +20,7 @@ struct CounterView: View {
     @State private var showingExitConfirmation = false
     @State private var tapIncrement: Int = 1
     @State private var showingIncrementPicker = false
-    @State private var showingCelebration = false
+    @State private var currentMilestone: MilestoneAchievement?
     
     private var userSettings: UserSettings {
         settings.first ?? UserSettings.default
@@ -52,9 +52,11 @@ struct CounterView: View {
                 }
                 .padding(Spacing.screenHorizontal)
                 
-                // Celebration overlay
-                if showingCelebration {
-                    celebrationOverlay
+                // Milestone alert overlay
+                if let milestone = currentMilestone {
+                    MilestoneAlertView(achievement: milestone) {
+                        currentMilestone = nil
+                    }
                 }
             }
         }
@@ -202,41 +204,6 @@ struct CounterView: View {
         .padding(.bottom, Spacing.lg)
     }
     
-    // MARK: - Celebration Overlay
-    
-    private var celebrationOverlay: some View {
-        ZStack {
-            Color.black.opacity(0.7)
-                .ignoresSafeArea()
-            
-            VStack(spacing: Spacing.lg) {
-                Image(systemName: "star.fill")
-                    .font(.system(size: 64))
-                    .foregroundColor(.yellow)
-                
-                Text(L10n.Counter.milestone)
-                    .font(Typography.title1)
-                    .foregroundColor(.white)
-                
-                Text("\(practice.progress.formatted()) " + L10n.Counter.repetitions)
-                    .font(Typography.title3)
-                    .foregroundColor(.white.opacity(0.8))
-                
-                Button(action: { showingCelebration = false }) {
-                    Text(L10n.Common.continue)
-                        .font(Typography.headline)
-                        .foregroundColor(practice.color)
-                        .padding(.horizontal, Spacing.xl)
-                        .padding(.vertical, Spacing.md)
-                        .background(.white)
-                        .cornerRadius(Spacing.buttonRadius)
-                }
-                .padding(.top, Spacing.md)
-            }
-        }
-        .transition(.opacity)
-    }
-    
     // MARK: - Actions
     
     private func incrementCounter() {
@@ -288,14 +255,31 @@ struct CounterView: View {
     
     private func checkMilestone(previousProgress: Int) {
         let newProgress = practice.progress
+        let maxRep = practice.maxRepetition
         
-        // Check percentage milestones
-        for milestone in Constants.progressMilestones {
-            let threshold = Int(Double(practice.maxRepetition) * Double(milestone) / 100.0)
+        // Check percentage milestones (25, 50, 75, 90, 100)
+        let milestones: [(percentage: Int, type: MilestoneType)] = [
+            (25, .progress25),
+            (50, .progress50),
+            (75, .progress75),
+            (90, .progress90),
+            (100, .completed)
+        ]
+        
+        for (percentage, type) in milestones {
+            let threshold = Int(Double(maxRep) * Double(percentage) / 100.0)
             if previousProgress < threshold && newProgress >= threshold {
                 withAnimation {
-                    showingCelebration = true
+                    currentMilestone = MilestoneAchievement(
+                        type: type,
+                        practice: practice,
+                        achievedAt: Date(),
+                        value: percentage
+                    )
                 }
+                
+                // Trigger celebration feedback
+                HapticService.shared.milestoneReached(level: type.celebrationLevel)
                 break
             }
         }

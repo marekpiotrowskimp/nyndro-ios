@@ -191,3 +191,23 @@
 "practice.delete.confirmation" = "Möchten Sie diese Praxis wirklich löschen?";
 "practice.duration" = "Dauer: %@";
 "practice.add_manual.message" = "Geben Sie die Anzahl der Wiederholungen ein, die Sie manuell hinzufügen möchten";
+"practice.reminders" = "Erinnerungen";
+
+// MARK: - Statistics Charts
+"statistics.weekday_activity" = "Aktivität nach Wochentag";
+"statistics.monthly_activity" = "Monatliche Aktivität";
+"statistics.no_data_yet" = "Noch keine Daten";
+"statistics.last_30_days" = "Letzte 30 Tage";
+
+// MARK: - Milestones
+"milestone.personal_best" = "Persönlicher Rekord!";
+"milestone.streak_7" = "7-Tage-Serie!";
+"milestone.streak_21" = "21-Tage-Serie!";
+"milestone.streak_30" = "30-Tage-Serie!";
+"milestone.streak_100" = "100-Tage-Serie!";
+"milestone.streak_365" = "365-Tage-Serie!";
+"milestone.progress_25" = "25% geschafft!";
+"milestone.progress_50" = "Halbzeit!";
+"milestone.progress_75" = "75% geschafft!";
+"milestone.progress_90" = "Fast geschafft!";
+"milestone.completed" = "Praxis abgeschlossen!";

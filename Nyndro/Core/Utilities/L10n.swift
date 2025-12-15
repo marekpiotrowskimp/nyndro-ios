@@ -80,6 +80,7 @@ enum L10n {
         static let addManual = "practice.add_manual".localized(default: "Add Manual Entry")
         static let recentHistory = "practice.recent_history".localized(default: "Recent History")
         static let noHistory = "practice.no_history".localized(default: "No practice history yet")
+        static let reminders = "practice.reminders".localized(default: "Reminders")
         
         enum Add {
             static let predefined = "practice.add.predefined".localized(default: "Predefined Practices")
@@ -166,6 +167,10 @@ enum L10n {
         static let completed = "statistics.completed".localized(default: "Completed")
         static let remaining = "statistics.remaining".localized(default: "Remaining")
         static let progress = "statistics.progress".localized(default: "Progress")
+        static let weekdayActivity = "statistics.weekday_activity".localized(default: "Activity by Day")
+        static let monthlyActivity = "statistics.monthly_activity".localized(default: "Monthly Activity")
+        static let noDataYet = "statistics.no_data_yet".localized(default: "No data yet")
+        static let last30Days = "statistics.last_30_days".localized(default: "Last 30 Days")
         
         enum Confidence {
             static let insufficient = "statistics.confidence.insufficient".localized(default: "Insufficient data")
@@ -224,9 +229,9 @@ enum L10n {
         }
     }
     
-    // MARK: - Reminder
+    // MARK: - Reminders (Repeat types)
     
-    enum Reminder {
+    enum ReminderStrings {
         enum Repeat {
             static let none = "reminder.repeat.none".localized(default: "Once")
             static let daily = "reminder.repeat.daily".localized(default: "Daily")

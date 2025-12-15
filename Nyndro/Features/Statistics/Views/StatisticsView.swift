@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import Charts
 
 struct StatisticsView: View {
     @Environment(\.modelContext) private var modelContext
@@ -47,6 +48,12 @@ struct StatisticsView: View {
                 if let practice = selectedPractice {
                     // Overview Card
                     overviewCard(for: practice)
+                    
+                    // Monthly Activity Chart
+                    MonthlyChartView(practice: practice)
+                    
+                    // Weekday Activity Chart
+                    WeekdayChartView(practice: practice)
                     
                     // Prediction Card
                     predictionCard(for: practice)
@@ -262,21 +269,7 @@ struct StatisticsView: View {
     // MARK: - Empty State
     
     private var emptyState: some View {
-        VStack(spacing: Spacing.lg) {
-            Image(systemName: "chart.bar")
-                .font(.system(size: 64))
-                .foregroundColor(Color.theme.textTertiary)
-            
-            Text(L10n.Empty.Statistics.title)
-                .font(Typography.title2)
-                .foregroundColor(Color.theme.textPrimary)
-            
-            Text(L10n.Empty.Statistics.message)
-                .font(Typography.body)
-                .foregroundColor(Color.theme.textSecondary)
-                .multilineTextAlignment(.center)
-        }
-        .padding(Spacing.screenHorizontal)
+        EmptyStateView.statistics
     }
     
     // MARK: - Calculation Methods

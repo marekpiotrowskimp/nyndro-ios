@@ -50,6 +50,12 @@ struct PracticeDetailView: View {
                         Label(L10n.Common.edit, systemImage: "pencil")
                     }
                     
+                    NavigationLink {
+                        RemindersListView(practice: practice)
+                    } label: {
+                        Label(L10n.Practice.reminders, systemImage: "bell")
+                    }
+                    
                     Button(action: { showingAddManual = true }) {
                         Label(L10n.Practice.addManual, systemImage: "plus.circle")
                     }
@@ -316,76 +322,6 @@ struct RecentHistoryRow: View {
                 .foregroundColor(Color.theme.accent)
         }
         .padding(.vertical, Spacing.xs)
-    }
-}
-
-// MARK: - Lotus Progress View (Placeholder)
-
-struct LotusProgressView: View {
-    let progress: Double
-    let color: Color
-    
-    var body: some View {
-        ZStack {
-            // Background
-            Circle()
-                .fill(Color.theme.lotusWater)
-            
-            // Progress circle as placeholder for lotus
-            Circle()
-                .trim(from: 0, to: progress)
-                .stroke(color, style: StrokeStyle(lineWidth: 12, lineCap: .round))
-                .rotationEffect(.degrees(-90))
-                .padding(20)
-            
-            // Center content
-            VStack(spacing: Spacing.xs) {
-                Image("mala_icon")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40, height: 40)
-                
-                Text("\(Int(progress * 100))%")
-                    .font(Typography.largeTitle)
-                    .foregroundColor(color)
-            }
-        }
-    }
-}
-
-// MARK: - Mala Progress View (Placeholder)
-
-struct MalaProgressView: View {
-    let progress: Double
-    let color: Color
-    
-    private let beadCount = 108
-    
-    var body: some View {
-        ZStack {
-            // Beads circle
-            ForEach(0..<beadCount, id: \.self) { index in
-                let angle = Double(index) / Double(beadCount) * 360
-                let isFilled = Double(index) / Double(beadCount) <= progress
-                
-                Circle()
-                    .fill(isFilled ? color : Color.theme.malaBeadEmpty)
-                    .frame(width: 6, height: 6)
-                    .offset(y: -80)
-                    .rotationEffect(.degrees(angle))
-            }
-            
-            // Center content
-            VStack(spacing: Spacing.xs) {
-                Text("\(Int(progress * Double(beadCount)))")
-                    .font(Typography.largeTitle)
-                    .foregroundColor(color)
-                
-                Text("/ \(beadCount)")
-                    .font(Typography.caption)
-                    .foregroundColor(Color.theme.textSecondary)
-            }
-        }
     }
 }
 

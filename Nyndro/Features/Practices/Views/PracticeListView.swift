@@ -87,34 +87,9 @@ struct PracticeListView: View {
     // MARK: - Empty State
     
     private var emptyState: some View {
-        VStack(spacing: Spacing.lg) {
-            Image("mala_icon")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80, height: 80)
-                .foregroundColor(Color.theme.textTertiary)
-            
-            Text(L10n.Empty.Practices.title)
-                .font(Typography.title2)
-                .foregroundColor(Color.theme.textPrimary)
-            
-            Text(L10n.Empty.Practices.message)
-                .font(Typography.body)
-                .foregroundColor(Color.theme.textSecondary)
-                .multilineTextAlignment(.center)
-            
-            Button(action: { showingAddPractice = true }) {
-                Label(L10n.Practice.add, systemImage: "plus")
-                    .font(Typography.headline)
-                    .foregroundColor(.white)
-                    .padding(.horizontal, Spacing.xl)
-                    .padding(.vertical, Spacing.md)
-                    .background(Color.theme.accent)
-                    .cornerRadius(Spacing.buttonRadius)
-            }
-            .padding(.top, Spacing.md)
+        EmptyStateView.practices {
+            showingAddPractice = true
         }
-        .padding(Spacing.screenHorizontal)
     }
     
     // MARK: - Actions

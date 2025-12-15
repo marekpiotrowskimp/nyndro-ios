@@ -16,12 +16,7 @@ struct PracticeCardView: View {
             // Header
             HStack(spacing: Spacing.sm) {
                 // Icon
-                Image(systemName: practice.imageName)
-                    .font(.system(size: 24))
-                    .foregroundColor(practice.color)
-                    .frame(width: 40, height: 40)
-                    .background(practice.color.opacity(0.15))
-                    .cornerRadius(Spacing.smallRadius)
+                PracticeIconView(practice: practice, size: .small)
                 
                 // Title and progress
                 VStack(alignment: .leading, spacing: 2) {

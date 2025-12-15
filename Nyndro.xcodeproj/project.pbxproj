@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027D935A774B7CBC62FEA409 /* MilestoneAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1DE36C0C4CB6A65573603 /* MilestoneAlertView.swift */; };
 		03F8BA95154F0AF882873CDE /* StatisticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369E8D0B2F5AF7447CD248F6 /* StatisticsService.swift */; };
 		06929B6DE27E511040FA9259 /* PracticeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E319EA89C0BF237EA4EE9 /* PracticeListView.swift */; };
 		09EE024D68DD4F1E707FD79F /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B00B6792607857459062B1 /* L10n.swift */; };
@@ -15,6 +16,7 @@
 		109E14C4721B0DE0F3D323B7 /* AddPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CFEA871112DDC66224F6B /* AddPracticeView.swift */; };
 		272D2EFAB9E360CCBBD591D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E247452A6EE6FE8A08D00 /* ContentView.swift */; };
 		2E0A833861C3A32ECD5D2ED4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D17766C4B86AEB98B5171 /* Constants.swift */; };
+		2E7090A93C72C0B0D4FF1063 /* PracticeIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F699561936388A75598AFD99 /* PracticeIconView.swift */; };
 		30EFEC6025C612D1B45A510E /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9A06BD4ADAFFFC8E24F9EB /* Practice.swift */; };
 		3BC666BC06431341A918515F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C7147DBF02019793C8B990 /* CounterView.swift */; };
 		3C4F8BAB81ECAF8D67AE9C05 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4697292F60C26120978E9CB3 /* Color+Extensions.swift */; };
@@ -22,13 +24,18 @@
 		502E4F774688779517AB3AC5 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64E6EDF3357486B69A348AD /* Reminder.swift */; };
 		5398C5D18072AD407483162E /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16A9AAD25AB0DBA2D39EDB0 /* Date+Extensions.swift */; };
 		558AA00D892CA29A72F1FB6C /* PracticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E63422C276BBEEB57F16B5 /* PracticeService.swift */; };
+		55F657B5748F4628F900F65F /* ImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6722FCC850DC7BD3AC4B67F7 /* ImportService.swift */; };
+		596D2F816D0A0BE0716F859F /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBC22ED70648570F8A763CD /* EmptyStateView.swift */; };
 		5FD81EF3360CA4ABFA05F8F8 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = C35DBB4F54B9D7820BD62549 /* Sounds */; };
 		62BABD697AEF2D2F64959850 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34295560168137E3F3595BC1 /* UserSettings.swift */; };
 		65AD9ACE64B9E88C91B034C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDED5210DBBDACFEB00EF041 /* Assets.xcassets */; };
+		772247543C67632A4E65EFF3 /* MonthlyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377ACB98C2C88B59824ED7E2 /* MonthlyChartView.swift */; };
 		794A01C2E86F0F969D4BD04A /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C39ED8D70CAC49E21D786C /* StatisticsView.swift */; };
 		7CC3A716ACBC6267F06E5357 /* MilestoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3455DCF875E7F9A62E142 /* MilestoneService.swift */; };
 		7DAD5AAE5EF7F858BE11A6EF /* NyndroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7405BB8287EA50C108491F /* NyndroApp.swift */; };
 		7E21D5BF853F61FCA15C1894 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497A8DEF0B3C31039796E6F /* SettingsView.swift */; };
+		7F4AD02C34A07EDA2216AAC6 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5311563FC5982D71B23187BE /* ExportService.swift */; };
+		80D70C37C3F2AF07EEB97DA9 /* RemindersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C190162D36141780DAD0FA6 /* RemindersListView.swift */; };
 		80F677576F4DC0771FF6A379 /* PredefinedPractices.json in Resources */ = {isa = PBXBuildFile; fileRef = 1680978F4E2BF5093102131E /* PredefinedPractices.json */; };
 		9803FD45BB4A5B8BB79AA960 /* HistoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928C13CA2425301155B9867 /* HistoryListView.swift */; };
 		A3134DD0D6273BCC358BA0E0 /* PracticeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A322EE6E6881095D80BF816 /* PracticeCardView.swift */; };
@@ -39,8 +46,12 @@
 		B8C364491886F622E51A6BA3 /* PracticeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3105A45317494BCA71E315C6 /* PracticeColors.swift */; };
 		BA081AA779001D5E3E4B1E3A /* HistoryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04DFA5CD9EE226B67675D8C /* HistoryEntry.swift */; };
 		C3DC9EA6C4FDD25825FA4CCB /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E3C5BF379E1E3DAD7CD1A3 /* Typography.swift */; };
+		DDA74AF723475B24F65CE690 /* WeekdayChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA2B5274373346B7BFB7CF /* WeekdayChartView.swift */; };
 		DED10F4A21CEA11D6D4A08FC /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D315811866E8AADE51B3660C /* ThemeColors.swift */; };
+		E4889C99A17F030133395D1C /* LotusProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DF280CCF04D4E665D7699B /* LotusProgressView.swift */; };
+		E682EB0921287C3095A8EE80 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DB2014C6F38CBA4273272D /* NotificationService.swift */; };
 		F3907A47942039546E85B5B1 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C114FA7B16C620B444D6165 /* String+Localization.swift */; };
+		F6866FE08CD5B05F2C41A8BB /* MalaProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637124D6E9B60CB381C703EA /* MalaProgressView.swift */; };
 		FA508BC128DC9A8A4BB45EB8 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F65E351225C43589D48297E /* Spacing.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,26 +73,36 @@
 		12A67270427045D12AB24FB5 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1680978F4E2BF5093102131E /* PredefinedPractices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PredefinedPractices.json; sourceTree = "<group>"; };
 		19E63422C276BBEEB57F16B5 /* PracticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeService.swift; sourceTree = "<group>"; };
+		1C190162D36141780DAD0FA6 /* RemindersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersListView.swift; sourceTree = "<group>"; };
 		1F9D17766C4B86AEB98B5171 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22DF280CCF04D4E665D7699B /* LotusProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusProgressView.swift; sourceTree = "<group>"; };
 		2809C4E4DEC6818AB1C702D6 /* HapticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticService.swift; sourceTree = "<group>"; };
 		2F07A667089737A59314F54A /* PredictionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionService.swift; sourceTree = "<group>"; };
 		3105A45317494BCA71E315C6 /* PracticeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeColors.swift; sourceTree = "<group>"; };
 		34295560168137E3F3595BC1 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		369E8D0B2F5AF7447CD248F6 /* StatisticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsService.swift; sourceTree = "<group>"; };
+		377ACB98C2C88B59824ED7E2 /* MonthlyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyChartView.swift; sourceTree = "<group>"; };
 		3D7B033D0E6DA486DB3BB89D /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		44C39ED8D70CAC49E21D786C /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		4697292F60C26120978E9CB3 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		52E3C5BF379E1E3DAD7CD1A3 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		5311563FC5982D71B23187BE /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		57BA2B5274373346B7BFB7CF /* WeekdayChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayChartView.swift; sourceTree = "<group>"; };
+		637124D6E9B60CB381C703EA /* MalaProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MalaProgressView.swift; sourceTree = "<group>"; };
+		6722FCC850DC7BD3AC4B67F7 /* ImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportService.swift; sourceTree = "<group>"; };
 		6F65E351225C43589D48297E /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		76DB2014C6F38CBA4273272D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		7E7405BB8287EA50C108491F /* NyndroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NyndroApp.swift; sourceTree = "<group>"; };
 		8928C13CA2425301155B9867 /* HistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListView.swift; sourceTree = "<group>"; };
 		8E9A06BD4ADAFFFC8E24F9EB /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
+		92E1DE36C0C4CB6A65573603 /* MilestoneAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneAlertView.swift; sourceTree = "<group>"; };
 		9F4E319EA89C0BF237EA4EE9 /* PracticeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeListView.swift; sourceTree = "<group>"; };
 		A16A9AAD25AB0DBA2D39EDB0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		A497A8DEF0B3C31039796E6F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A525EDDECB491AA5F371B7A5 /* NyndroTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NyndroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A923791665675E3CF7293B9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA0803120D9B5C4AAD27FD6F /* PracticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeDetailView.swift; sourceTree = "<group>"; };
+		ADBC22ED70648570F8A763CD /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		B38855878158B5FFB0D02BE7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B56CFEA871112DDC66224F6B /* AddPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPracticeView.swift; sourceTree = "<group>"; };
 		C1B00B6792607857459062B1 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
@@ -94,6 +115,7 @@
 		E64E6EDF3357486B69A348AD /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		EB4D1779C4241128B6626111 /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
 		F43E247452A6EE6FE8A08D00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F699561936388A75598AFD99 /* PracticeIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeIconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -169,6 +191,7 @@
 		38E54000790E0EE35C4FFFA5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1C190162D36141780DAD0FA6 /* RemindersListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,8 +298,11 @@
 		6E08BCCAB6C70C63F004D24E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5311563FC5982D71B23187BE /* ExportService.swift */,
 				2809C4E4DEC6818AB1C702D6 /* HapticService.swift */,
+				6722FCC850DC7BD3AC4B67F7 /* ImportService.swift */,
 				C2E3455DCF875E7F9A62E142 /* MilestoneService.swift */,
+				76DB2014C6F38CBA4273272D /* NotificationService.swift */,
 				19E63422C276BBEEB57F16B5 /* PracticeService.swift */,
 				2F07A667089737A59314F54A /* PredictionService.swift */,
 				3D7B033D0E6DA486DB3BB89D /* SoundService.swift */,
@@ -295,6 +321,11 @@
 		77B190F45BB45EC138D101FF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ADBC22ED70648570F8A763CD /* EmptyStateView.swift */,
+				22DF280CCF04D4E665D7699B /* LotusProgressView.swift */,
+				637124D6E9B60CB381C703EA /* MalaProgressView.swift */,
+				92E1DE36C0C4CB6A65573603 /* MilestoneAlertView.swift */,
+				F699561936388A75598AFD99 /* PracticeIconView.swift */,
 				7E646558FB74699AD3871677 /* ProgressBar */,
 			);
 			path = Components;
@@ -424,6 +455,8 @@
 		EAFABCA381BE24EDAE510996 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
+				377ACB98C2C88B59824ED7E2 /* MonthlyChartView.swift */,
+				57BA2B5274373346B7BFB7CF /* WeekdayChartView.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -581,21 +614,31 @@
 				272D2EFAB9E360CCBBD591D3 /* ContentView.swift in Sources */,
 				3BC666BC06431341A918515F /* CounterView.swift in Sources */,
 				5398C5D18072AD407483162E /* Date+Extensions.swift in Sources */,
+				596D2F816D0A0BE0716F859F /* EmptyStateView.swift in Sources */,
+				7F4AD02C34A07EDA2216AAC6 /* ExportService.swift in Sources */,
 				A8CC431C3A4BAFA63A17954F /* HapticService.swift in Sources */,
 				BA081AA779001D5E3E4B1E3A /* HistoryEntry.swift in Sources */,
 				9803FD45BB4A5B8BB79AA960 /* HistoryListView.swift in Sources */,
+				55F657B5748F4628F900F65F /* ImportService.swift in Sources */,
 				09EE024D68DD4F1E707FD79F /* L10n.swift in Sources */,
+				E4889C99A17F030133395D1C /* LotusProgressView.swift in Sources */,
+				F6866FE08CD5B05F2C41A8BB /* MalaProgressView.swift in Sources */,
+				027D935A774B7CBC62FEA409 /* MilestoneAlertView.swift in Sources */,
 				7CC3A716ACBC6267F06E5357 /* MilestoneService.swift in Sources */,
+				772247543C67632A4E65EFF3 /* MonthlyChartView.swift in Sources */,
+				E682EB0921287C3095A8EE80 /* NotificationService.swift in Sources */,
 				7DAD5AAE5EF7F858BE11A6EF /* NyndroApp.swift in Sources */,
 				0A94CACFB46A151FB7293073 /* OnboardingView.swift in Sources */,
 				30EFEC6025C612D1B45A510E /* Practice.swift in Sources */,
 				A3134DD0D6273BCC358BA0E0 /* PracticeCardView.swift in Sources */,
 				B8C364491886F622E51A6BA3 /* PracticeColors.swift in Sources */,
 				A94573CA411EF70287879685 /* PracticeDetailView.swift in Sources */,
+				2E7090A93C72C0B0D4FF1063 /* PracticeIconView.swift in Sources */,
 				06929B6DE27E511040FA9259 /* PracticeListView.swift in Sources */,
 				558AA00D892CA29A72F1FB6C /* PracticeService.swift in Sources */,
 				0AC8148767EA204C6B516990 /* PredictionService.swift in Sources */,
 				502E4F774688779517AB3AC5 /* Reminder.swift in Sources */,
+				80D70C37C3F2AF07EEB97DA9 /* RemindersListView.swift in Sources */,
 				7E21D5BF853F61FCA15C1894 /* SettingsView.swift in Sources */,
 				B8073420F4C1B8300D242A2C /* SoundService.swift in Sources */,
 				FA508BC128DC9A8A4BB45EB8 /* Spacing.swift in Sources */,
@@ -605,6 +648,7 @@
 				DED10F4A21CEA11D6D4A08FC /* ThemeColors.swift in Sources */,
 				C3DC9EA6C4FDD25825FA4CCB /* Typography.swift in Sources */,
 				62BABD697AEF2D2F64959850 /* UserSettings.swift in Sources */,
+				DDA74AF723475B24F65CE690 /* WeekdayChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
