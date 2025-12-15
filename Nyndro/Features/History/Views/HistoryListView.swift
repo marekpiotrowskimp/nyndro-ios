@@ -53,14 +53,26 @@ struct HistoryListView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
                         Button(action: { selectedPractice = nil }) {
-                            Label(Filter.all, systemImage: selectedPractice == nil ? "checkmark" : "")
+                            HStack {
+                                Text(Filter.all)
+                                Spacer()
+                                if selectedPractice == nil {
+                                    Image(systemName: "checkmark")
+                                }
+                            }
                         }
                         
                         Divider()
                         
                         ForEach(practices) { practice in
                             Button(action: { selectedPractice = practice }) {
-                                Label(practice.name, systemImage: selectedPractice?.id == practice.id ? "checkmark" : "")
+                                HStack {
+                                    Text(practice.name)
+                                    Spacer()
+                                    if selectedPractice?.id == practice.id {
+                                        Image(systemName: "checkmark")
+                                    }
+                                }
                             }
                         }
                     } label: {
