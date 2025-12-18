@@ -1,0 +1,24 @@
+Nyndro ist eine achtsame Praxis-Tracking-App für buddhistische Praktizierende auf dem Ngöndro-Pfad.
+
+VERFOLGE DEINEN FORTSCHRITT
+• Zähle deine täglichen Wiederholungen mit einfachem Tippen
+• Verfolge den Fortschritt zu traditionellen Zielen (100.000+ Wiederholungen)
+• Schöne Lotus- oder Mala-Fortschrittsvisualisierungen
+
+INTELLIGENTE VORHERSAGEN
+• Erfahre, wann du deine Übungsziele erreichen wirst
+• Tägliche, wöchentliche und monatliche Statistiken
+• Verfolge deine Übungsserien und Muster
+
+ACHTSAME FUNKTIONEN
+• Sanfte Erinnerungen für die tägliche Praxis
+• Bildschirm bleibt während der Sitzung aktiv
+• Beruhigende Klänge: Glocke, Klangschale, Gong
+• Haptisches Feedback bei jedem Zählen
+
+EXPORT & BACKUP
+• Exportiere Daten als JSON oder CSV
+• Importiere Daten für Gerätewechsel
+• Verliere niemals deinen Fortschritt
+
+Mit Achtsamkeit erstellt zum Wohle aller fühlenden Wesen.

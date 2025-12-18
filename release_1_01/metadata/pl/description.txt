@@ -1,0 +1,24 @@
+Nyndro to aplikacja do śledzenia praktyki dla buddyjskich praktykujących ścieżki Nyndro (Ngöndro).
+
+ŚLEDŹ SWÓJ POSTĘP
+• Licz codzienne powtórzenia praktyki prostym dotknięciem
+• Śledź postęp w realizacji tradycyjnych celów (100 000+ powtórzeń)
+• Piękne wizualizacje postępu: lotos lub mala
+
+INTELIGENTNE PROGNOZY
+• Dowiedz się, kiedy ukończysz swoje cele praktyki
+• Zobacz statystyki dzienne, tygodniowe i miesięczne
+• Śledź serie praktyk i wzorce
+
+UWAŻNE FUNKCJE
+• Ustaw delikatne przypomnienia o codziennej praktyce
+• Utrzymuj ekran włączony podczas sesji
+• Wybierz uspokajające dźwięki: dzwonek, misa tybetańska, gong
+• Wibracje przy każdym liczeniu
+
+EKSPORT I KOPIA ZAPASOWA
+• Eksportuj dane jako JSON lub CSV
+• Importuj dane przy przenoszeniu między urządzeniami
+• Nigdy nie stracisz swoich postępów
+
+Stworzone z uważnością dla dobra wszystkich czujących istot.
